@@ -1,13 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import HomePage from './Components/HomePage'
 
 function App() {
 
   return (
     <>
-      <div className='text-4xl bg-black text-white'>this is a notes taking app</div>
+      <HomePage/>
     </>
   )
 }
