@@ -1,11 +1,25 @@
+import dotenv from "dotenv";
 import app from './app.js';
+import { connectToDatabase } from './DATABASE/Connection.js';
 
-const port = 4001;
-
-app.get("/",(req,res) =>{
-    res.send("Welcome to Notes App API");
+dotenv.config({
+    path: './env'
 })
 
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-});
+connectToDatabase()
+    .then(() =>{
+        app.on("error" ,(error)=>{
+            console.log("Server Error",error);
+            process.exit(1);
+        })
+
+        return app.listen(process.env.PORT || 5000, () =>{
+            console.log(`Database is Connected !!`);
+            console.log(`Server is running on the port :${process.env.PORT || 5000}`);
+            console.log(`visit the Server here http://localhost:${process.env.PORT || 5000}`);
+        })
+    })
+    .catch((err)=>{
+        console.log("Database Connection Failed in indexjs",error);
+        process.exit(1);
+    })
