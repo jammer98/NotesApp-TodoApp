@@ -1,20 +1,23 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 
 function HomePage() {
+
+  const navigate = useNavigate();
   return (
     <div className='h-screen w-full bg-white'>
         <div className='bg-white text-white flex justify-between items-center py-4 fixed top-0 left-0 w-full text-center text-lg border-b border-neutral-200 shadow-sm z-10  '>
            <div className='flex justify-center items-center gap-5 ml-5 text-black cursor-pointer'>
             <img src="../public/logo.png" alt="logo" className='w-[40px] h-[40px]' />
-            <h1 className='text-2xl font-["Momo_Trust_Display"] font-semibold'>Accelerate</h1>
+            <h1 className='text-2xl font-["Montserrat"] font-semibold tracking-tight'>Accelerate</h1>
             </div>
 
             <div className='flex justify-center items-center gap-8 mr-6'>
-                <button className='rounded-xl text-black flex justify-center items-center gap-3 px-7 py-2 cursor-pointer hover:bg-neutral-200 transition-all duration-200 hover:text-neutral-900 font-semibold'>
+                <button onClick={() => navigate("/login")} className='rounded-xl text-black flex justify-center items-center gap-3 px-7 py-2 cursor-pointer hover:bg-neutral-200 transition-all duration-200 hover:text-neutral-900 font-semibold border-3 border-neutral-300'>
                   <svg xmlns="http://www.w3.org/2000/svg" 
                     fill="none" 
                     viewBox="0 0 24 24" 
-                    stroke-width="1.5" 
+                    strokewidth="1.5" 
                     stroke="currentColor" 
                     class="size-5">
                   <path stroke-linecap="round" 
@@ -23,7 +26,7 @@ function HomePage() {
                   </svg>
                   <p>login</p>
                 </button>
-                <button className='rounded-xl bg-blue-500 text-white flex justify-center items-center  px-7 py-2 cursor-pointer hover:bg-blue-400 transition-all duration-200 text-shadow-2xs tracking-wide text-shadow-black'>Register</button>
+                <button onClick={() => navigate('/register')} className='rounded-xl bg-blue-500 text-white flex justify-center items-center  px-7 py-2 cursor-pointer hover:bg-blue-400 transition-all duration-200 text-shadow-2xs tracking-wide text-shadow-black'>Register</button>
             </div>
         </div>
 
@@ -44,7 +47,7 @@ function HomePage() {
           />
           <div className='flex justify-center items-center w-full'>
             <div className='bg-violet-400 p-20 rounded-2xl flex flex-col justify-center items-start gap-5 h-[550px]'>
-            <h1 className='text-4xl font-bold text-neutral-900 text-center font-["Momo_Trust_Display"] tracking-tight'>Organize your ideas like a pro</h1>
+            <h1 className='text-4xl font-bold text-neutral-900 text-center font-["Roboto_Condensed"] tracking-tight'>Organize your ideas like a pro</h1>
             <ul className='list-disc mt-5 text-neutral-800 text-xl pl-5 gap-2.5 flex flex-col'>
               <li className='font-["Roboto_Condensed"] text-xl'>have a mind blowing movie ending</li>
               <li className='font-["Roboto_Condensed"] text-xl'>Thought of composing two songs </li>
@@ -57,6 +60,29 @@ function HomePage() {
             </div>
           </div>
         </div>
+
+        <footer className="w-full bg-neutral-900 text-white py-20 mt-16 ">
+          <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-3">
+              <img src="../public/logo.png" alt="logo" className="w-10 h-10" />
+              <div>
+                <h4 className="text-lg font-semibold">Accelerate</h4>
+                <p className="text-sm text-neutral-300">Track Ideas - Fast | Effortless | Secure.</p>
+              </div>
+            </div>
+
+            <nav className="flex gap-6 text-sm">
+              <a href="#" className="text-neutral-300 hover:text-white text-xl">Home</a>
+              <a href="#" className="text-neutral-300 hover:text-white text-xl">Features</a>
+              <a href="#" className="text-neutral-300 hover:text-white text-xl">Pricing</a>
+              <a href="#" className="text-neutral-300 hover:text-white text-xl">Contact</a>
+            </nav>
+
+            <div className="text-sm text-neutral-400">
+              © {new Date().getFullYear()} Accelerate. All rights reserved.
+            </div>
+          </div>
+        </footer>
 
     </div>
   )
