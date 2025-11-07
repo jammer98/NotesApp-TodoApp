@@ -1,19 +1,21 @@
 import React from 'react'
-import { useNavigate } from 'react-router'
+import { useNavigate  } from 'react-router'
 
 function HomePage() {
 
   const navigate = useNavigate();
   return (
     <div className='h-screen w-full bg-white'>
-        <div className='bg-white text-white flex justify-between items-center py-4 fixed top-0 left-0 w-full text-center text-lg border-b border-neutral-200 shadow-sm z-10  '>
+        <div className='bg-white text-white flex justify-between items-center py-4 fixed top-0 left-0 w-full text-center text-lg border-b border-neutral-200 shadow-sm z-10'>
+          <a href='/'>
            <div className='flex justify-center items-center gap-5 ml-5 text-black cursor-pointer'>
-            <img src="../public/logo.png" alt="logo" className='w-[40px] h-[40px]' />
+            <img src="../public/logo.png" alt="logo" className='w-10 h-10' />
             <h1 className='text-2xl font-["Montserrat"] font-semibold tracking-tight'>Accelerate</h1>
             </div>
+            </a>
 
             <div className='flex justify-center items-center gap-8 mr-6'>
-                <button onClick={() => navigate("/login")} className='rounded-xl text-black flex justify-center items-center gap-3 px-7 py-2 cursor-pointer hover:bg-neutral-200 transition-all duration-200 hover:text-neutral-900 font-semibold border-3 border-neutral-300'>
+                <button onClick={() => navigate("/login")} className='rounded-xl text-black flex justify-center items-center gap-3 px-7 py-2 cursor-pointer hover:bg-neutral-200 transition-all duration-200 hover:text-neutral-900 font-semibold border-2 border-neutral-200'>
                   <svg xmlns="http://www.w3.org/2000/svg" 
                     fill="none" 
                     viewBox="0 0 24 24" 
@@ -50,7 +52,7 @@ function HomePage() {
             <h1 className='text-4xl font-bold text-neutral-900 text-center font-["Roboto_Condensed"] tracking-tight'>Organize your ideas like a pro</h1>
             <ul className='list-disc mt-5 text-neutral-800 text-xl pl-5 gap-2.5 flex flex-col'>
               <li className='font-["Roboto_Condensed"] text-xl'>have a mind blowing movie ending</li>
-              <li className='font-["Roboto_Condensed"] text-xl'>Thought of composing two songs </li>
+              <li className='font-["Roboto_Condensed"] text-xl'>composing songs </li>
               <li className='font-["Roboto_Condensed"] text-xl'>Write a book about my life</li>
               <li className='font-["Roboto_Condensed"] text-xl'>Deep Dive in the history of the Cosmos</li>
               <li className='font-["Roboto_Condensed"] text-xl'>Got a amazing idea for a new App</li>
@@ -64,7 +66,7 @@ function HomePage() {
         <footer className="w-full bg-neutral-900 text-white py-20 mt-16 ">
           <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="logo" className="w-10 h-10" />
+              <img src="../public/logo.png" alt="logo" className="w-10 h-10 rounded-full" />
               <div>
                 <h4 className="text-lg font-semibold">Accelerate</h4>
                 <p className="text-sm text-neutral-300">Track Ideas - Fast | Effortless | Secure.</p>
