@@ -63,6 +63,32 @@ function HomePage() {
           </div>
         </div>
 
+        <div className='py-32 flex justify-center items-center w-full h-[400px] bg-linear-to-r bg-[hsl(19,100%,55%)] '>
+          <div className='w-1/2 h-[400px] flex items-center justify-center'>
+          <ul className='list-decimal text-white space-y-4'>
+            <li className='font-["Playfair_Display"] text-4xl tracking-tight'>Write your idea</li>
+            <li className='font-["Playfair_Display"] text-4xl tracking-tight'>Add a tag to it </li>
+            <li className='font-["Playfair_Displayt"] text-4xl tracking-tight'>Add a time for notification</li>
+            <li className='font-["Playfair_Display"] text-4xl tracking-tight'>Done</li>
+          </ul>
+          </div>
+          <div className='flex justify-center items-center w-1/2 h-[400px] bg-[hsl(37,72%,89%)]'>
+                <button className='bg-[hsl(19,100%,55%)] p-4 rounded-2xl border-3 border-[hsl(0,0%,100%)] text-white text-2xl font-["Roboto_Condensed"] flex items-center justify-center gap-3 hover:bg-[hsl(19,100%,65%)] hover:text-3xl cursor-pointer transition-all duration-400'>
+                 <p>Go to DashBoard</p>
+                 <svg xmlns="http://www.w3.org/2000/svg" 
+                 fill="none" 
+                 viewBox="0 0 24 24" 
+                 stroke-width="1.5" 
+                 stroke="currentColor" 
+                 class="size-8">
+                <path stroke-linecap="round" 
+                stroke-linejoin="round" 
+                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                </button>
+          </div>
+        </div>
+
         <footer className="w-full bg-neutral-900 text-white py-20 mt-16 ">
           <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
