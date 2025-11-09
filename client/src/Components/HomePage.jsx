@@ -4,6 +4,7 @@ import { useNavigate  } from 'react-router'
 function HomePage() {
 
   const navigate = useNavigate();
+
   return (
     <div className='h-screen w-full bg-white'>
         <div className='bg-white text-white flex justify-between items-center py-4 fixed top-0 left-0 w-full text-center text-lg border-b border-neutral-200 shadow-sm z-10'>
@@ -73,7 +74,7 @@ function HomePage() {
           </ul>
           </div>
           <div className='flex justify-center items-center w-1/2 h-[400px] bg-[hsl(37,72%,89%)]'>
-                <button className='bg-[hsl(19,100%,55%)] p-4 rounded-2xl border-3 border-[hsl(0,0%,100%)] text-white text-2xl font-["Roboto_Condensed"] flex items-center justify-center gap-3 hover:bg-[hsl(19,100%,65%)] hover:text-3xl cursor-pointer transition-all duration-400'>
+                <button onClick={()=> navigate("/Dashboard")} className='bg-[hsl(19,100%,55%)] p-4 rounded-2xl border-3 border-[hsl(0,0%,100%)] text-white text-2xl font-["Roboto_Condensed"] flex items-center justify-center gap-3 hover:bg-[hsl(19,100%,65%)] hover:text-3xl cursor-pointer transition-all duration-400'>
                  <p>Go to DashBoard</p>
                  <svg xmlns="http://www.w3.org/2000/svg" 
                  fill="none" 

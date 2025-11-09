@@ -2,6 +2,7 @@ import HomePage from './Components/HomePage'
 import { Route, Routes } from 'react-router'
 import LoginPage from './Components/LoginPage'
 import Register from './Components/Register.jsx'
+import Dashboard from './Components/Dashboard.jsx'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Route path='/' element={<HomePage />} />
       <Route path='/login' element={<LoginPage />} />
       <Route path='/register' element={<Register />} />
+      <Route path='/Dashboard' element={<Dashboard />} />
     </Routes>
     </>
   )
