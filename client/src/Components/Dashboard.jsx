@@ -4,7 +4,7 @@ function Dashboard() {
   return (
     <div className='w-full h-screen'>
       <div className='flex items-center'>
-        <div className='w-1/6 bg-red-300 h-screen flex flex-col justify-between'>
+        <div className='w-1/6 h-screen flex flex-col justify-between border-r-2 border-neutral-500'>
         <div className='flex flex-col gap-8 py-8 h-auto justify-center items-start'>
           <div className='flex gap-3 items-center px-5'>
               <img src="../public/logo.png" alt="logo" className="w-10 h-10 rounded-full" />
@@ -12,7 +12,7 @@ function Dashboard() {
           </div>
 
           <div className='flex flex-col gap-5 h-auto w-full px-3 justify-start'>
-            <div className='w-full rounded-xl py-2 flex gap-2 items-center hover:bg-amber-500 transition-all duration-200'>
+            <button className='w-full rounded-xl py-2 flex gap-2 items-center hover:bg-neutral-200 transition-all duration-200 cursor-pointer'>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg"
                width="25" 
@@ -31,8 +31,9 @@ function Dashboard() {
               </svg>
               </div>
              <p>Dashboard</p>
-              </div>
-            <div className='w-full rounded-xl py-2 hover:bg-amber-500 flex items-center gap-2 transition-all duration-200'>
+            </button>
+
+            <button className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
               fill="none" 
@@ -46,8 +47,9 @@ function Dashboard() {
               </svg>
               </div>
               <p>All Ideas</p>
-            </div>
-            <div className= 'w-full rounded-xl py-2 hover:bg-amber-500 flex items-center gap-2 transition-all duration-200'>
+            </button>
+
+            <button className= 'w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
                   fill="none" 
@@ -61,8 +63,9 @@ function Dashboard() {
                 </svg>
               </div>
               <p>Add New Idea</p>
-            </div>
-            <div className='w-full rounded-xl py-2 hover:bg-amber-500 flex items-center gap-2 transition-all duration-200 '>
+            </button>
+
+            <button className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer '>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
                   fill="none" 
@@ -76,8 +79,9 @@ function Dashboard() {
                 </svg>
               </div>
               <p>Progress</p>
-            </div>
-            <div className='w-full rounded-xl py-2 hover:bg-amber-500 flex items-center gap-2 transition-all duration-200'>
+            </button>
+
+            <button className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
               fill="none" 
@@ -91,12 +95,12 @@ function Dashboard() {
             </svg>
               </div>
               <p>Collaborate</p>
-            </div>
+            </button>
           </div>
         </div>
 
-        <div className='w-full h-auto py-6 px-3 bg-yellow-300 flex items-center'>
-          <div className='px-3'>
+        <button className='w-full h-auto py-5 px-3 flex items-center hover:bg-neutral-200 cursor-pointer'>
+          <div className='px-5'>
             <svg xmlns="http://www.w3.org/2000/svg" 
           fill="none" 
           viewBox="0 0 24 24" 
@@ -109,12 +113,25 @@ function Dashboard() {
           </svg>
           </div>
           <p className='text-lg'>User</p>
-        </div>
+        </button>
       </div>
 
         <div className='w-5/6 h-screen'>
-        <div className='flex border-2 border-neutral-500 justify-between items-center py-4'>
-          <p className='px-3'>Dashboard</p>
+        <div className='flex  border-b-neutral-500 border-b-2 justify-between items-center py-5 '>
+          <div></div>
+          <div className='flex justify-center items-center gap-4 px-4'>
+            <button className='cursor-pointer'>
+            <svg xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke-width="1.5" 
+            stroke="currentColor" 
+            class="size-6">
+            <path stroke-linecap="round" 
+            stroke-linejoin="round"
+            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
+          </svg>
+          </button>
           <button className='px-3 cursor-pointer'>
             <svg xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
@@ -127,6 +144,7 @@ function Dashboard() {
           d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
           </svg>
           </button>
+          </div>
         </div>
         </div>
       </div>
