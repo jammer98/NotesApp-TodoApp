@@ -38,7 +38,7 @@ function Dashboard() {
              <p>Dashboard</p>
             </button>
 
-            <button className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
+            <button onClick={()=> navigate('/Allideas')} className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
               fill="none" 
@@ -54,7 +54,7 @@ function Dashboard() {
               <p>All Ideas</p>
             </button>
 
-            <button className= 'w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
+            <button onClick={()=> navigate('/AddNewIdea')} className= 'w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
                   fill="none" 
@@ -70,7 +70,7 @@ function Dashboard() {
               <p>Add New Idea</p>
             </button>
 
-            <button className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer '>
+            <button onClick={()=> navigate('/Progress')} className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer '>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
                   fill="none" 
@@ -86,7 +86,7 @@ function Dashboard() {
               <p>Progress</p>
             </button>
 
-            <button className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
+            <button onClick={()=> navigate('/Collaborate')} className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
               fill="none" 
@@ -104,7 +104,7 @@ function Dashboard() {
           </div>
         </div>
 
-        <button className='w-full h-auto py-5 px-3 flex items-center hover:bg-neutral-200 cursor-pointer'>
+        <button onClick={()=> navigate('/User')} className='w-full h-auto py-5 px-3 flex items-center hover:bg-neutral-200 cursor-pointer'>
           <div className='px-5'>
             <svg xmlns="http://www.w3.org/2000/svg" 
           fill="none" 
