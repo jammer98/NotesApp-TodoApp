@@ -1,15 +1,20 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 
 function Dashboard() {
+
+
+  const navigate =  useNavigate();
+
   return (
     <div className='w-full h-screen'>
       <div className='flex items-center'>
         <div className='w-1/6 h-screen flex flex-col justify-between border-r-2 border-neutral-500'>
         <div className='flex flex-col gap-8 py-8 h-auto justify-center items-start'>
-          <div className='flex gap-3 items-center px-5'>
+          <button onClick={()=> navigate("/")} className='flex gap-3 items-center px-5 cursor-pointer'>
               <img src="../public/logo.png" alt="logo" className="w-10 h-10 rounded-full" />
               <p className='text-lg font-semibold'>Accelerate</p>
-          </div>
+          </button>
 
           <div className='flex flex-col gap-5 h-auto w-full px-3 justify-start'>
             <button className='w-full rounded-xl py-2 flex gap-2 items-center hover:bg-neutral-200 transition-all duration-200 cursor-pointer'>
