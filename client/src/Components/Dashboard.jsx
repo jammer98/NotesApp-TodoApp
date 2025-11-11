@@ -8,7 +8,7 @@ function Dashboard() {
 
   return (
     <div className='w-full h-screen'>
-      <div className='flex items-center'>
+      <div className='flex items-center h-full'>
         <div className='w-1/6 h-screen flex flex-col justify-between border-r-2 border-neutral-500'>
         <div className='flex flex-col gap-8 py-8 h-auto justify-center items-start'>
           <button onClick={()=> navigate("/")} className='flex gap-3 items-center px-5 cursor-pointer'>
@@ -121,8 +121,8 @@ function Dashboard() {
         </button>
       </div>
 
-        <div className='w-5/6 h-screen'>
-        <div className='flex  border-b-neutral-500 border-b-2 justify-between items-center py-5 '>
+      <div className='w-5/6 h-screen flex flex-col'>
+        <div className='flex border-b-neutral-500 border-b-2 justify-between items-center py-5 h-auto bg-white'>
           <div></div>
           <div className='flex justify-center items-center gap-4 px-4'>
             <button className='cursor-pointer'>
@@ -151,14 +151,17 @@ function Dashboard() {
           </button>
           </div>
         </div>
-        <div className='w-full h-[90%]'>
+
           <div className='text-neutral-700 w-full'>
-            <div className='ml-4 mt-2'>
+            <div className='px-4 py-2'>
                 <h1 className='text-2xl font-semibold font-["Playfair_Display"]'>DashBoard</h1>
                 <p className='font-["Montserrat"] tracking-tight '>Create your ideas and work on it and track your progress</p>
             </div>
             </div>
-        </div>    
+
+            <div className='flex-1 flex justify-center items-center'>
+              <p>this is the body of the the dashboard.</p>
+            </div>
         </div>
       </div>
     </div>
