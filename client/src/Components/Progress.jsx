@@ -1,9 +1,12 @@
 import React from 'react'
-import { useNavigate } from 'react-router'
+import { useLocation, useNavigate } from 'react-router'
 
 function Progress() {
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path ;
 
   return(
     <div className='w-full h-screen'>
@@ -69,7 +72,7 @@ function Progress() {
               <p className='font-["Montserrat"]'>Add New Idea</p>
             </button>
 
-            <button onClick={()=> navigate('/Progress')} className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer '>
+            <button onClick={()=> navigate('/Progress')}  className={`w-full rounded-xl py-2 flex gap-2 items-center transition-all duration-200 cursor-pointer ${isActive("/Progress") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
                   fill="none" 

@@ -1,9 +1,12 @@
 import React from 'react'
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 
 function Allideas() {
 
    const navigate = useNavigate();
+   const location = useLocation();
+
+   const isActive = (path) => location.pathname === path;
 
   return(
     <div className='w-full h-screen'>
@@ -37,7 +40,7 @@ function Allideas() {
              <p className='font-["Montserrat"]'>Dashboard</p>
             </button>
 
-            <button onClick={()=> navigate('/Allideas')} className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
+            <button onClick={()=> navigate('/Allideas')} className={`w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer ${isActive("/Allideas") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
               fill="none" 

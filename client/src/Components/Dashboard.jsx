@@ -1,10 +1,13 @@
 import React from 'react'
-import { useNavigate } from 'react-router'
+import { useLocation, useNavigate } from 'react-router'
 
 function Dashboard() {
 
 
   const navigate =  useNavigate();
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
 
   return (
     <div className='w-full h-screen'>
@@ -17,7 +20,7 @@ function Dashboard() {
           </button>
 
           <div className='flex flex-col gap-5 h-auto w-full px-3 justify-start'>
-            <button className='w-full rounded-xl py-2 flex gap-2 items-center hover:bg-neutral-200 transition-all duration-200 cursor-pointer'>
+            <button onClick={()=> navigate('/Dashboard')} className={`w-full rounded-xl py-2 flex gap-2 items-center transition-all duration-200 cursor-pointer ${isActive("/Dashboard") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg"
                width="25" 
@@ -38,7 +41,7 @@ function Dashboard() {
              <p className='font-["Montserrat"]'>Dashboard</p>
             </button>
 
-            <button onClick={()=> navigate('/Allideas')} className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
+            <button onClick={()=> navigate('/Allideas')} className={`w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer ${isActive("/Allideas") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
               fill="none" 
@@ -54,7 +57,7 @@ function Dashboard() {
               <p className='font-["Montserrat"]'>All Ideas</p>
             </button>
 
-            <button onClick={()=> navigate('/AddNewIdea')} className= 'w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
+            <button onClick={()=> navigate('/AddNewIdea')} className={`w-full rounded-xl py-2 flex gap-2 items-center transition-all duration-200 cursor-pointer ${isActive("/AddNewIdea") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
                   fill="none" 
@@ -70,7 +73,7 @@ function Dashboard() {
               <p className='font-["Montserrat"]'>Add New Idea</p>
             </button>
 
-            <button onClick={()=> navigate('/Progress')} className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer '>
+            <button onClick={()=> navigate('/Progress')} className={`w-full rounded-xl py-2 flex gap-2 items-center transition-all duration-200 cursor-pointer ${isActive("/Progress") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
                   fill="none" 
@@ -86,7 +89,7 @@ function Dashboard() {
               <p className='font-["Montserrat"]'>Progress</p>
             </button>
 
-            <button onClick={()=> navigate('/Collaborate')} className='w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer'>
+            <button onClick={()=> navigate('/Collaborate')} className={`w-full rounded-xl py-2 flex gap-2 items-center transition-all duration-200 cursor-pointer ${isActive("/Collaborate") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
               fill="none" 
@@ -153,14 +156,95 @@ function Dashboard() {
         </div>
 
           <div className='text-neutral-700 w-full'>
-            <div className='px-4 py-2'>
+            <div className='flex items-center justify-between px-4 py-2' >
+              <div>
                 <h1 className='text-2xl font-semibold font-["Playfair_Display"]'>DashBoard</h1>
                 <p className='font-["Montserrat"] tracking-tight '>Create your ideas and work on it and track your progress</p>
+              </div>
+              <button onClick={() => navigate("/AddNewIdea")} className='flex items-center gap-3 bg-neutral-300 text-neutral-800 rounded-xl px-3 py-2 cursor-pointer hover:bg-neutral-200'>
+                  <svg xmlns="http://www.w3.org/2000/svg" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke-width="1.5" 
+                  stroke="currentColor" 
+                  class="size-6">
+                  <path stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+                  <p>New Task</p>
+              </button>
+                
             </div>
             </div>
 
-            <div className='flex-1 flex justify-center items-center'>
-              <p>this is the body of the the dashboard.</p>
+              <div className='flex-1 p-6 overflow-y-auto'>
+              <div className='flex w-full items-stretch gap-4 justify-between'>
+                 <div className='flex-1 bg-red-400 rounded-2xl p-6 flex flex-col justify-center items-center'>
+                    <p className='text-md opacity-90'>Total Ideas</p>
+                    <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
+                      <svg xmlns="http://www.w3.org/2000/svg" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke-width="1.5" 
+                      stroke="currentColor" 
+                      class="size-6">
+                      <path stroke-linecap="round" 
+                      stroke-linejoin="round" 
+                      d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122" />
+                      </svg>
+                      <h1 >3</h1>
+                    </div>
+                  </div>
+
+                  <div className='flex-1 bg-red-400 rounded-2xl p-6 flex flex-col justify-center items-center'>
+                    <p className='text-md opacity-90'>In Progress</p>
+                    <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
+                      <svg xmlns="http://www.w3.org/2000/svg" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke-width="1.5" 
+                      stroke="currentColor" 
+                      class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                      <h1>5</h1>
+                    </div>
+                  </div>
+
+                   <div className='flex-1 bg-red-400 rounded-2xl p-6 flex flex-col justify-center items-center'>
+                    <p className='text-md opacity-90'>Completed</p>
+                    <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
+                      <svg xmlns="http://www.w3.org/2000/svg" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke-width="1.5" 
+                      stroke="currentColor" 
+                      class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 0 1 9 9v.375M10.125 2.25A3.375 3.375 0 0 1 13.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 0 1 3.375 3.375M9 15l2.25 2.25L15 12" />
+                      </svg>
+                      <h1>4</h1>
+                    </div>
+                  </div>
+
+                  <div className='flex-1 bg-red-400 rounded-2xl p-6 flex flex-col justify-center items-center'>
+                    <p className='text-md opacity-90'>Pending</p>
+                    <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
+                      <svg xmlns="http://www.w3.org/2000/svg" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke-width="1.5" 
+                      stroke="currentColor" 
+                      class="size-6">
+                      <path stroke-linecap="round" 
+                      stroke-linejoin="round" 
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                      </svg>
+                      <h1 >3</h1>
+                    </div>
+                  </div>
+
+              </div>
             </div>
         </div>
       </div>
