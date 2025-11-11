@@ -42,11 +42,11 @@ function HomePage() {
             <p className='text-neutral-700 mt-4 text-2xl font-["Montserrat"]'>Collect your amazing Ideas and track it effortlessly all in one place </p>
         </div>
 
-        <div className='w-full flex justify-between items-center p-20 gap-10 mt-20'>
+        <div className='w-full flex justify-between items-center p-20 gap-20 mt-20'>
           <img 
             src="/photo2.png" 
             alt="photo-2" 
-            className='w-[800px] h-[550px] object-cover hover:scale-110 transition-transform duration-500 ease-in-out cursor-pointer rounded-2xl' 
+            className='w-[750px] h-[550px] object-cover scale-110 hover:scale-120 transition-transform duration-500 ease-in-out cursor-pointer rounded-3xl' 
           />
           <div className='flex justify-center items-center w-full'>
             <div className='bg-violet-400 p-20 rounded-2xl flex flex-col justify-center items-start gap-5 h-[550px]'>
