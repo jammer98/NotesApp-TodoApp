@@ -178,10 +178,11 @@ function Dashboard() {
             </div>
             </div>
 
-              <div className='flex-1 p-6 overflow-y-auto'>
+          <div className='overflow-x-auto'>
+                <div className='p-6 overflow-y-auto'>
               <div className='flex w-full items-stretch gap-4 justify-between'>
-                 <div className='flex-1 bg-red-400 rounded-2xl p-6 flex flex-col justify-center items-center'>
-                    <p className='text-md opacity-90'>Total Ideas</p>
+                 <div className='flex-1 bg-neutral-100 rounded-2xl p-6 flex flex-col justify-center items-center'>
+                    <p className='text-lg opacity-90 font-[""]'>Total Ideas</p>
                     <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
                       <svg xmlns="http://www.w3.org/2000/svg" 
                       fill="none" 
@@ -193,12 +194,12 @@ function Dashboard() {
                       stroke-linejoin="round" 
                       d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122" />
                       </svg>
-                      <h1 >3</h1>
+                      <h1>4</h1>
                     </div>
                   </div>
 
-                  <div className='flex-1 bg-red-400 rounded-2xl p-6 flex flex-col justify-center items-center'>
-                    <p className='text-md opacity-90'>In Progress</p>
+                  <div className='flex-1 bg-amber-300 rounded-2xl p-6 flex flex-col justify-center items-center'>
+                    <p className='text-lg opacity-90 font-[""]'>In Progress</p>
                     <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
                       <svg xmlns="http://www.w3.org/2000/svg" 
                       fill="none" 
@@ -212,8 +213,8 @@ function Dashboard() {
                     </div>
                   </div>
 
-                   <div className='flex-1 bg-red-400 rounded-2xl p-6 flex flex-col justify-center items-center'>
-                    <p className='text-md opacity-90'>Completed</p>
+                   <div className='flex-1 bg-green-300 rounded-2xl p-6 flex flex-col justify-center items-center'>
+                    <p className='text-lg opacity-90 font-[""]'>Completed</p>
                     <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
                       <svg xmlns="http://www.w3.org/2000/svg" 
                       fill="none" 
@@ -227,8 +228,8 @@ function Dashboard() {
                     </div>
                   </div>
 
-                  <div className='flex-1 bg-red-400 rounded-2xl p-6 flex flex-col justify-center items-center'>
-                    <p className='text-md opacity-90'>Pending</p>
+                  <div className='flex-1 bg-sky-300 rounded-2xl p-6 flex flex-col justify-center items-center'>
+                    <p className='text-lg opacity-90 font-[""]'>Pending</p>
                     <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
                       <svg xmlns="http://www.w3.org/2000/svg" 
                       fill="none" 
@@ -240,12 +241,67 @@ function Dashboard() {
                       stroke-linejoin="round" 
                       d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
                       </svg>
-                      <h1 >3</h1>
+                      <h1>3</h1>
                     </div>
                   </div>
 
               </div>
             </div>
+ 
+            <div className='flex-1 rounded-2xl w-300 px-3 m-auto h-screen'>
+              <div className='px-7 py-4 flex justify-between items-center'>
+                <div><p className='font-[""] font-semibold text-2xl'>Recent Ideas</p><p>Your most recent ideas and their status</p></div>
+                <button onClick={()=>navigate("/Allideas")} className='px-4 py-2 rounded-2xl border-2 border-neutral-300 bg-neutral-100 text-neutral-700 text-center hover:bg-neutral-50 cursor-pointer font-["Montserrat"]'>View All</button>
+              </div>
+              <div className='flex flex-col w-full gap-4 px-5 py-4'>
+                <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
+                  <div className='flex flex-col justify-center w-full hover:bg-neutral-100'>
+                    <div className='font-[""] text-lg'>Startup Idea</div>
+                    <div className='w-auto flex gap-2 mt-2 items-center'>
+                      <div className='bg-red-300 text-white rounded-2xl px-2 py-1 text-sm font-["Montserrat"]'>High</div>
+                      <div> Due : 02/11/2025</div>
+                    </div>
+                  </div>
+                    <div className='w-35 px-3 border-2 border-neutral-300 mt-2 rounded-2xl text-center tracking-tight bg-amber-300 text-white font-["Montserrat"]'>In progress</div>
+                </div>
+
+                <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
+                  <div className='flex flex-col justify-center w-full hover:bg-neutral-100'>
+                    <div className='font-[""] text-lg'>Leetcode-23 optimal way</div>
+                    <div className='w-auto flex gap-2 mt-2 items-center'>
+                      <div className='bg-white text-neutral-500 rounded-2xl px-2 py-1 text-sm font-["Montserrat"]'>Medium</div>
+                      <div> Due : 02/11/2025</div>
+                    </div>
+                  </div>
+                    <div className='w-35 px-3 border-2 border-neutral-300 mt-2 rounded-2xl text-center tracking-tight bg-green-300 text-white font-["Montserrat"]'>Completed</div>
+                </div>
+
+               <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
+                  <div className='flex flex-col justify-center w-full hover:bg-neutral-100'>
+                    <div className='font-[""] text-lg'>Odessy Ending - alternate Universe</div>
+                    <div className='w-auto flex gap-2 mt-2 items-center'>
+                      <div className='text-neutral-500 rounded-2xl px-2 py-1 text-sm border-2 border-neutral-400 font-["Montserrat"]'>Low</div>
+                      <div> Due : 02/11/2025</div>
+                    </div>
+                  </div>
+                    <div className='w-35 px-3 border-2 border-neutral-300 mt-2 rounded-2xl text-center tracking-tight bg-sky-300 text-white font-["Montserrat"]'>Pending</div>
+                </div>
+
+                <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
+                  <div className='flex flex-col justify-center w-full hover:bg-neutral-100'>
+                    <div className='font-[""] text-lg'>Maths Assignment - 2</div>
+                    <div className='w-auto flex gap-2 mt-2 items-center'>
+                      <div className='bg-red-300 text-white rounded-2xl px-2 py-1 text-sm font-["Montserrat"]'>High</div>
+                      <div> Due : 02/11/2025</div>
+                    </div>
+                  </div>
+                    <div className='w-35 px-3 border-2 border-neutral-300 mt-2 rounded-2xl text-center tracking-tight bg-amber-300 text-white font-["Montserrat"]'>In progress</div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+            
         </div>
       </div>
     </div>
