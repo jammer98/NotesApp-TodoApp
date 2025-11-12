@@ -10,7 +10,7 @@ function Dashboard() {
   return (
     <div className='w-full h-screen flex'>
       {/* Sidebar */}
-      <div className='w-1/6 h-screen flex flex-col justify-between border-r-2 border-neutral-500'>
+      <div className='w-1/6 h-screen flex flex-col justify-between border-r-2 border-neutral-500 '>
         <div className='flex flex-col gap-8 py-8 h-auto justify-center items-start'>
           <button onClick={() => navigate("/")} className='flex gap-3 items-center px-5 cursor-pointer'>
             <img src="../public/logo.png" alt="logo" className="w-10 h-10 rounded-full" />
@@ -73,7 +73,7 @@ function Dashboard() {
       </div>
 
       {/* Main Content Area */}
-      <div className='w-5/6 h-screen flex flex-col'>
+      <div className='w-5/6 h-screen flex flex-col '>
         {/* Top Header */}
         <div className='flex border-b-neutral-500 border-b-2 justify-between items-center py-5 bg-white'>
           <div></div>
@@ -151,7 +151,7 @@ function Dashboard() {
             </div>
 
             {/* Recent Ideas Section */}
-            <div className='px-6'>
+            <div className='px-6 rounded-2xl mx-6 mb-6 border-2 border-neutral-300 bg-white shadow-md'>
               <div className='px-7 py-4 flex justify-between items-center'>
                 <div>
                   <p className='font-semibold text-2xl'>Recent Ideas</p>
@@ -168,7 +168,7 @@ function Dashboard() {
                       <div>Due : 02/11/2025</div>
                     </div>
                   </div>
-                  <div className='w-35 px-3 border-2 border-neutral-300 rounded-2xl text-center tracking-tight bg-amber-300 text-white font-["Montserrat"]'>In progress</div>
+                  <div className='w-35 px-3 border-2 border-neutral-300 rounded-2xl text-center tracking-tight bg-amber-300 text-neutral-800 font-["Montserrat"]'>In progress</div>
                 </div>
                 <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
                   <div className='flex flex-col justify-center w-full'>
@@ -178,7 +178,7 @@ function Dashboard() {
                       <div>Due : 02/11/2025</div>
                     </div>
                   </div>
-                  <div className='w-35 px-3 border-2 border-neutral-300 rounded-2xl text-center tracking-tight bg-green-300 text-white font-["Montserrat"]'>Completed</div>
+                  <div className='w-35 px-3 border-2 border-neutral-300 rounded-2xl text-center tracking-tight bg-green-300 text-neutral-800 font-["Montserrat"]'>Completed</div>
                 </div>
                 <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
                   <div className='flex flex-col justify-center w-full'>
@@ -188,7 +188,7 @@ function Dashboard() {
                       <div>Due : 02/11/2025</div>
                     </div>
                   </div>
-                  <div className='w-35 px-3 border-2 border-neutral-300 rounded-2xl text-center tracking-tight bg-sky-300 text-white font-["Montserrat"]'>Pending</div>
+                  <div className='w-35 px-3 border-2 border-neutral-300 rounded-2xl text-center tracking-tight bg-sky-300 text-neutral-800 font-["Montserrat"]'>Pending</div>
                 </div>
                 <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
                   <div className='flex flex-col justify-center w-full'>
@@ -198,7 +198,7 @@ function Dashboard() {
                       <div>Due : 02/11/2025</div>
                     </div>
                   </div>
-                  <div className='w-35 px-3 border-2 border-neutral-300 rounded-2xl text-center tracking-tight bg-amber-300 text-white font-["Montserrat"]'>In progress</div>
+                  <div className='w-35 px-3 border-2 border-neutral-300 rounded-2xl text-center tracking-tight bg-amber-300 text-neutral-800 font-["Montserrat"]'>In progress</div>
                 </div>
               </div>
             </div>
