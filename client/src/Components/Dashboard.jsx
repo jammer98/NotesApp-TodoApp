@@ -18,7 +18,6 @@ function Dashboard() {
               <img src="../public/logo.png" alt="logo" className="w-10 h-10 rounded-full" />
               <p className='text-lg font-semibold'>Accelerate</p>
           </button>
-
           <div className='flex flex-col gap-5 h-auto w-full px-3 justify-start'>
             <button onClick={()=> navigate('/Dashboard')} className={`w-full rounded-xl py-2 flex gap-2 items-center transition-all duration-200 cursor-pointer ${isActive("/Dashboard") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
               <div className='px-3'>
@@ -40,7 +39,6 @@ function Dashboard() {
               </div>
              <p className='font-["Montserrat"]'>Dashboard</p>
             </button>
-
             <button onClick={()=> navigate('/Allideas')} className={`w-full rounded-xl py-2 hover:bg-neutral-200 flex items-center gap-2 transition-all duration-200 cursor-pointer ${isActive("/Allideas") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
@@ -56,7 +54,6 @@ function Dashboard() {
               </div>
               <p className='font-["Montserrat"]'>All Ideas</p>
             </button>
-
             <button onClick={()=> navigate('/AddNewIdea')} className={`w-full rounded-xl py-2 flex gap-2 items-center transition-all duration-200 cursor-pointer ${isActive("/AddNewIdea") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
@@ -72,7 +69,6 @@ function Dashboard() {
               </div>
               <p className='font-["Montserrat"]'>Add New Idea</p>
             </button>
-
             <button onClick={()=> navigate('/Progress')} className={`w-full rounded-xl py-2 flex gap-2 items-center transition-all duration-200 cursor-pointer ${isActive("/Progress") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
@@ -88,7 +84,6 @@ function Dashboard() {
               </div>
               <p className='font-["Montserrat"]'>Progress</p>
             </button>
-
             <button onClick={()=> navigate('/Collaborate')} className={`w-full rounded-xl py-2 flex gap-2 items-center transition-all duration-200 cursor-pointer ${isActive("/Collaborate") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
               <div className='px-3'>
                 <svg xmlns="http://www.w3.org/2000/svg" 
@@ -106,7 +101,6 @@ function Dashboard() {
             </button>
           </div>
         </div>
-
         <button onClick={()=> navigate('/User')} className='w-full h-auto py-5 px-3 flex items-center hover:bg-neutral-200 cursor-pointer'>
           <div className='px-5'>
             <svg xmlns="http://www.w3.org/2000/svg" 
@@ -123,7 +117,6 @@ function Dashboard() {
           <p className='text-lg font-["Montserrat"]'>User</p>
         </button>
       </div>
-
       <div className='w-5/6 h-screen flex flex-col'>
         <div className='flex border-b-neutral-500 border-b-2 justify-between items-center py-5 h-auto bg-white'>
           <div></div>
@@ -154,7 +147,6 @@ function Dashboard() {
           </button>
           </div>
         </div>
-
           <div className='text-neutral-700 w-full'>
             <div className='flex items-center justify-between px-4 py-2' >
               <div>
@@ -174,10 +166,8 @@ function Dashboard() {
                   </svg>
                   <p>New Task</p>
               </button>
-                
             </div>
             </div>
-
           <div className='overflow-x-auto'>
                 <div className='p-6 overflow-y-auto'>
               <div className='flex w-full items-stretch gap-4 justify-between'>
@@ -197,7 +187,6 @@ function Dashboard() {
                       <h1>4</h1>
                     </div>
                   </div>
-
                   <div className='flex-1 bg-amber-300 rounded-2xl p-6 flex flex-col justify-center items-center'>
                     <p className='text-lg opacity-90 font-[""]'>In Progress</p>
                     <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
@@ -212,7 +201,6 @@ function Dashboard() {
                       <h1>5</h1>
                     </div>
                   </div>
-
                    <div className='flex-1 bg-green-300 rounded-2xl p-6 flex flex-col justify-center items-center'>
                     <p className='text-lg opacity-90 font-[""]'>Completed</p>
                     <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
@@ -227,7 +215,6 @@ function Dashboard() {
                       <h1>4</h1>
                     </div>
                   </div>
-
                   <div className='flex-1 bg-sky-300 rounded-2xl p-6 flex flex-col justify-center items-center'>
                     <p className='text-lg opacity-90 font-[""]'>Pending</p>
                     <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
@@ -244,10 +231,8 @@ function Dashboard() {
                       <h1>3</h1>
                     </div>
                   </div>
-
               </div>
             </div>
- 
             <div className='flex-1 rounded-2xl w-300 px-3 m-auto h-screen'>
               <div className='px-7 py-4 flex justify-between items-center'>
                 <div><p className='font-[""] font-semibold text-2xl'>Recent Ideas</p><p>Your most recent ideas and their status</p></div>
@@ -264,7 +249,6 @@ function Dashboard() {
                   </div>
                     <div className='w-35 px-3 border-2 border-neutral-300 mt-2 rounded-2xl text-center tracking-tight bg-amber-300 text-white font-["Montserrat"]'>In progress</div>
                 </div>
-
                 <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
                   <div className='flex flex-col justify-center w-full hover:bg-neutral-100'>
                     <div className='font-[""] text-lg'>Leetcode-23 optimal way</div>
@@ -275,7 +259,6 @@ function Dashboard() {
                   </div>
                     <div className='w-35 px-3 border-2 border-neutral-300 mt-2 rounded-2xl text-center tracking-tight bg-green-300 text-white font-["Montserrat"]'>Completed</div>
                 </div>
-
                <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
                   <div className='flex flex-col justify-center w-full hover:bg-neutral-100'>
                     <div className='font-[""] text-lg'>Odessy Ending - alternate Universe</div>
@@ -286,7 +269,6 @@ function Dashboard() {
                   </div>
                     <div className='w-35 px-3 border-2 border-neutral-300 mt-2 rounded-2xl text-center tracking-tight bg-sky-300 text-white font-["Montserrat"]'>Pending</div>
                 </div>
-
                 <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
                   <div className='flex flex-col justify-center w-full hover:bg-neutral-100'>
                     <div className='font-[""] text-lg'>Maths Assignment - 2</div>
@@ -297,11 +279,9 @@ function Dashboard() {
                   </div>
                     <div className='w-35 px-3 border-2 border-neutral-300 mt-2 rounded-2xl text-center tracking-tight bg-amber-300 text-white font-["Montserrat"]'>In progress</div>
                 </div>
-                
               </div>
             </div>
           </div>
-            
         </div>
       </div>
     </div>
