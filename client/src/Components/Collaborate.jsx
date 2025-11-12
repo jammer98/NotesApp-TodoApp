@@ -163,7 +163,7 @@ function Collaborate() {
             </div>
 
             <div className='flex-1 flex justify-center items-center'>
-              <p>this is the body of the progress.</p>
+              <p className='text-5xl font-["Playfair_Display"] font-semibold'>This Feature Will come Soon....</p>
             </div>
         </div>
       </div>

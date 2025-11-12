@@ -8,6 +8,11 @@ function AddNewIdea() {
 
   const isActive = (path) => location.pathname === path;
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+  }
+
   return(
     <div className='w-full h-screen'>
       <div className='flex items-center h-full'>
@@ -154,16 +159,58 @@ function AddNewIdea() {
           </div>
         </div>
 
-          <div className='text-neutral-700 w-full'>
+          <div className='flex flex-col h-full p-6 gap-6 overflow-x-auto'>
+            <div className='text-neutral-700 w-full'>
             <div className='px-4 py-2'>
                 <h1 className='text-2xl font-semibold font-["Playfair_Display"]'>Add New Idea</h1>
                 <p className='font-["Montserrat"] tracking-tight '>Add your most amazing new Idea</p>
             </div>
             </div>
 
-            <div className='flex-1 flex justify-center items-center'>
-              <p>this is the body of the add new idea.</p>
+            <div className='flex-1 flex justify-center items-center rounded-2xl'>
+              <div>
+                <form action="submit" onSubmit={handleFormSubmit} className='px-10 py-6 rounded-2xl w-2xl'>
+                  <div className='flex flex-col gap-4 justify-center flex-1'>
+                    <div className='flex flex-col '>
+                      <label className='font-["Montserrat"] text-lg'>Idea Title</label>
+                    <input type="text" required placeholder='Enter Idea Title' className='w-full h-10 rounded-md border-2 border-neutral-400 px-3 outline-none'/>
+                    </div>
+                    <div className='flex flex-col'>
+                      <label className='font-["Montserrat"] text-lg'>Idea description</label>
+                      <textarea placeholder='Enter Idea Description' className='w-full h-24 rounded-md border-2 border-neutral-400 px-3 py-2 outline-none resize-none'></textarea>
+                    </div>
+                    <div className='flex items-center gap-5 w-full'>
+                    <div className='flex flex-col w-1/2'>
+                      <label className='font-["Montserrat"] text-lg'>Priority</label>
+                      <select defaultValue="medium" className='h-10 rounded-md border-2 border-neutral-400 px-3 transition-all duration-500 outline-none'>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                      </select>
+                    </div>
+                   <div className='flex flex-col w-1/2'>
+                      <label className='font-["Montserrat"] text-lg'>Status</label>
+                      <select defaultValue="In Progress" className='h-10 rounded-md border-2 border-neutral-400 px-3'>
+                        <option value="Completed">Completed</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Not Started">Pending</option>
+                      </select>
+                    </div>
+                    </div>
+                    <div className='flex flex-col '>
+                      <label className='font-["Montserrat"] text-lg'>Due Date</label>
+                      <input type="date" placeholder='Enter Due Date' className='w-96 h-10 rounded-md border-2 border-neutral-400 px-3'/>
+                    </div>
+                  </div>
+                  <div className='flex items-center justify-end gap-5 mt-7'>
+                      <button type='reset' className='bg-neutral-50 text-neutral-900 rounded-2xl p-3 hover:bg-neutral-200 cursor-pointer'>Cancel</button>
+                      <button type="submit" className='bg-neutral-900 text-white font-semibold rounded-2xl p-3 hover:bg-neutral-700 cursor-pointer shadow-lg shadow-neutral-500'>Add Idea</button>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
+          
         </div>
       </div>
     </div>
