@@ -96,8 +96,8 @@ function Dashboard() {
           <div className='text-neutral-700 w-full'>
             {/* Page Title */}
             <div className='flex items-center justify-between px-4 py-2'>
-              <div>
-                <h1 className='text-2xl font-semibold font-["Playfair_Display"]'>DashBoard</h1>
+              <div className='px-4 py-4'>
+                <h1 className='text-2xl font-bold font-["Playfair_Display"]'>DashBoard</h1>
                 <p className='font-["Montserrat"] tracking-tight'>Create your ideas and work on it and track your progress</p>
               </div>
               <button onClick={() => navigate("/AddNewIdea")} className='flex items-center gap-3 bg-neutral-100 text-neutral-800 rounded-xl px-3 py-2 cursor-pointer hover:bg-neutral-50'>
@@ -111,56 +111,56 @@ function Dashboard() {
             {/* Stats Cards */}
             <div className='p-6'>
               <div className='flex w-full items-stretch gap-4 justify-between'>
-                <div className='flex-1 bg-neutral-100 rounded-2xl p-6 flex flex-col justify-center items-center'>
-                  <p className='text-lg opacity-90'>Total Ideas</p>
-                  <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
+                <div className='flex-1 bg-blue-100 rounded-2xl p-6 flex flex-col justify-center items-center border-l-4 border-blue-500'>
+                  <p className='text-lg opacity-90 text-blue-900'>Total Ideas</p>
+                  <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold text-blue-700'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122" />
                     </svg>
                     <h1>4</h1>
                   </div>
                 </div>
-                <div className='flex-1 bg-amber-300 rounded-2xl p-6 flex flex-col justify-center items-center'>
-                  <p className='text-lg opacity-90'>In Progress</p>
-                  <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
+                <div className='flex-1 bg-amber-100 rounded-2xl p-6 flex flex-col justify-center items-center border-l-4 border-amber-500'>
+                  <p className='text-lg opacity-90 text-amber-900'>In Progress</p>
+                  <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold text-amber-700'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
                     <h1>2</h1>
                   </div>
                 </div>
-                <div className='flex-1 bg-green-300 rounded-2xl p-6 flex flex-col justify-center items-center'>
-                  <p className='text-lg opacity-90'>Completed</p>
-                  <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
+                <div className='flex-1 bg-green-100 rounded-2xl p-6 flex flex-col justify-center items-center border-l-4 border-green-500'>
+                  <p className='text-lg opacity-90 text-green-900'>Completed</p>
+                  <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold text-green-700'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 0 1 9 9v.375M10.125 2.25A3.375 3.375 0 0 1 13.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 0 1 3.375 3.375M9 15l2.25 2.25L15 12" />
                     </svg>
                     <h1>1</h1>
                   </div>
                 </div>
-                <div className='flex-1 bg-sky-300 rounded-2xl p-6 flex flex-col justify-center items-center'>
-                  <p className='text-lg opacity-90'>Pending</p>
-                  <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
+                <div className='flex-1 bg-sky-100 rounded-2xl p-6 flex flex-col justify-center items-center border-l-4 border-sky-500'>
+                  <p className='text-lg opacity-90 text-sky-900'>Pending</p>
+                  <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold text-sky-700'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
                     </svg>
                     <h1>1</h1>
                   </div>
                 </div>
-                <div className='flex-1 bg-amber-300 rounded-2xl p-6 flex flex-col justify-center items-center'>
-                  <p className='text-lg opacity-90'>In Review</p>
-                  <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                <div className='flex-1 bg-orange-100 rounded-2xl p-6 flex flex-col justify-center items-center border-l-4 border-orange-500'>
+                  <p className='text-lg opacity-90 text-orange-900'>In Review</p>
+                  <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold text-orange-700'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
                     </svg>
                     <h1>2</h1>
                   </div>
                 </div>
-                <div className='flex-1 bg-sky-300 rounded-2xl p-6 flex flex-col justify-center items-center'>
-                  <p className='text-lg opacity-90'>BrainStorming</p>
-                  <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                <div className='flex-1 bg-purple-100 rounded-2xl p-6 flex flex-col justify-center items-center border-l-4 border-purple-500'>
+                  <p className='text-lg opacity-90 text-purple-900'>BrainStorming</p>
+                  <div className='flex items-center mt-8 text-3xl gap-2.5 font-bold text-purple-700'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
                     </svg>
                     <h1>1</h1>
                   </div>
@@ -175,48 +175,48 @@ function Dashboard() {
                   <p className='font-semibold text-2xl'>Recent Ideas</p>
                   <p>Your most recent ideas and their status</p>
                 </div>
-                <button onClick={() => navigate("/Allideas")} className='px-4 py-2 rounded-2xl border-2 border-neutral-300 bg-neutral-100 text-neutral-700 text-center hover:bg-neutral-50 cursor-pointer font-["Montserrat"]'>View All</button>
+                <button onClick={() => navigate("/Allideas")} className='px-4 py-2 rounded-lg font-semibold border-2 border-neutral-300 bg-neutral-100 text-neutral-700 text-center hover:bg-neutral-50 cursor-pointer font-["Montserrat"]'>View All</button>
               </div>
               <div className='flex flex-col w-full gap-4 px-5 py-4'>
                 <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
                   <div className='flex flex-col justify-center w-full'>
                     <div className='text-lg'>Startup Idea</div>
                     <div className='w-auto flex gap-2 mt-2 items-center'>
-                      <div className='bg-red-300 text-white rounded-2xl px-2 py-1 text-sm font-["Montserrat"]'>High</div>
+                      <div className='bg-red-400 text-white rounded-2xl px-2 py-1 text-sm font-["Montserrat"]'>High</div>
                       <div>Due : 02/11/2025</div>
                     </div>
                   </div>
-                  <div className='w-35 px-3 border-2 border-neutral-300 rounded-2xl text-center tracking-tight bg-amber-300 text-neutral-800 font-["Montserrat"]'>In progress</div>
+                  <div className='w-40 px-2 py-1 text-lg rounded-xl text-center tracking-tight bg-amber-100 opacity-90 text-amber-900 font-["Montserrat"] border-l-4 border-amber-500 '>In progress</div>
                 </div>
                 <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
                   <div className='flex flex-col justify-center w-full'>
                     <div className='text-lg'>Leetcode-23 optimal way</div>
                     <div className='w-auto flex gap-2 mt-2 items-center'>
-                      <div className='bg-white text-neutral-500 rounded-2xl px-2 py-1 text-sm font-["Montserrat"]'>Medium</div>
+                      <div className='bg-yellow-400 text-white rounded-2xl px-2 py-1 text-sm font-["Montserrat"]'>Medium</div>
                       <div>Due : 02/11/2025</div>
                     </div>
                   </div>
-                  <div className='w-35 px-3 border-2 border-neutral-300 rounded-2xl text-center tracking-tight bg-green-300 text-neutral-800 font-["Montserrat"]'>Completed</div>
-                </div>
+                    <div className='text-center tracking-tight bg-green-100 font-["Montserrat"] w-40 px-2 py-1 text-lg rounded-xl opacity-90 text-green-900 border-l-4 border-green-500'>Completed</div>
+                  </div>
                 <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
                   <div className='flex flex-col justify-center w-full'>
                     <div className='text-lg'>Odessy Ending - alternate Universe</div>
                     <div className='w-auto flex gap-2 mt-2 items-center'>
-                      <div className='text-neutral-500 rounded-2xl px-2 py-1 text-sm border-2 border-neutral-400 font-["Montserrat"]'>Low</div>
+                      <div className='text-white bg-blue-400 rounded-2xl px-2 py-1 text-sm font-["Montserrat"]'>Low</div>
                       <div>Due : 02/11/2025</div>
                     </div>
                   </div>
-                  <div className='w-35 px-3 border-2 border-neutral-300 rounded-2xl text-center tracking-tight bg-sky-300 text-neutral-800 font-["Montserrat"]'>Pending</div>
+                  <div className='ltext-center tracking-tight bg-sky-100 font-["Montserrat"] opacity-90 text-sky-900 border-l-4 border-sky-500 w-40 px-2 py-1 text-lg rounded-xl'>Pending</div>
                 </div>
                 <div className='flex justify-between items-center px-3 rounded-2xl py-2 hover:bg-neutral-100'>
                   <div className='flex flex-col justify-center w-full'>
                     <div className='text-lg'>Maths Assignment - 2</div>
                     <div className='w-auto flex gap-2 mt-2 items-center'>
-                      <div className='bg-red-300 text-white rounded-2xl px-2 py-1 text-sm font-["Montserrat"]'>High</div>
+                      <div className='bg-red-400 text-white rounded-2xl px-2 py-1 text-sm font-["Montserrat"]'>High</div>
                       <div>Due : 02/11/2025</div>
                     </div>
                   </div>
-                  <div className='w-35 px-3 border-2 border-neutral-300 rounded-2xl text-center tracking-tight bg-amber-300 text-neutral-800 font-["Montserrat"]'>In progress</div>
+                  <div className='w-40 px-2 py-1 text-lg rounded-xl text-center tracking-tight bg-amber-100 opacity-90 text-amber-900 font-["Montserrat"] border-l-4 border-amber-500'>In progress</div>
                 </div>
               </div>
             </div>

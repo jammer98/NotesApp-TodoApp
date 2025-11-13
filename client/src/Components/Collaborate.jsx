@@ -156,8 +156,8 @@ function Collaborate() {
         </div>
 
           <div className='text-neutral-700 w-full'>
-            <div className='ml-4 mt-2'>
-                <h1 className='text-2xl font-semibold font-["Playfair_Display"]'>Collaborate</h1>
+            <div className='px-4 py-4'>
+                <h1 className='text-2xl font-bold font-["Playfair_Display"]'>Collaborate</h1>
                 <p className='font-["Montserrat"] tracking-tight '>Work with your team and friends</p>
             </div>
             </div>

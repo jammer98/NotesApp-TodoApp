@@ -155,14 +155,14 @@ function Progress() {
         </div>
 
           <div className='text-neutral-700 w-full'>
-            <div className='px-4 py-2'>
-                <h1 className='text-2xl font-semibold font-["Playfair_Display"]'>Progress</h1>
+            <div className='px-4 py-4'>
+                <h1 className='text-2xl font-bold font-["Playfair_Display"]'>Progress</h1>
                 <p className='font-["Montserrat"] tracking-tight '>Your progress is visible here</p>
             </div>
             </div>
 
             <div className='flex-1 flex justify-center items-center'>
-              <p>this is the body of the progress.</p>
+              <p>All the charts and the graphs will be here.</p>
             </div>
         </div>
       </div>

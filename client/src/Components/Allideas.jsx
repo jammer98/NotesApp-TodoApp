@@ -154,15 +154,15 @@ function Allideas() {
           </div>
         </div>
 
-        <div className='flex-1 flex flex-col overflow-x-auto bg-red-200'>
+        <div className='flex-1 flex flex-col overflow-x-auto'>
           <div className='text-neutral-700 w-full'>
-            <div className='px-4 py-2'>
-                <h1 className='text-2xl font-semibold font-["Playfair_Display"]'>All Ideas</h1>
+            <div className='px-4 py-4'>
+                <h1 className='text-2xl font-bold font-["Playfair_Display"]'>All Ideas</h1>
                 <p className='font-["Montserrat"] tracking-tight '>View your Ideas here </p>
             </div>
             </div>
 
-             <div className='flex-1 flex items-center justify-between bg-blue-200 overflow-y-auto px-10 py-5 min-w-max gap-5'>
+             <div className='flex-1 flex items-center justify-between overflow-y-auto px-10 py-5 min-w-max gap-5'>
 
               <div className='flex flex-col items-center h-full w-80 bg-yellow-300 rounded-2xl shrink-0'>
                <div className='flex items-center gap-2 px-4 py-3 border-b-2 border-yellow-400'>
@@ -198,7 +198,7 @@ function Allideas() {
               <div className='flex flex-col items-center h-full w-80 bg-yellow-300 rounded-2xl shrink-0'>
                <div className='flex items-center gap-2 px-4 py-3 border-b-2 border-yellow-400'>
                 <h1 className='font-semibold text-lg'>Pending</h1>
-                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>3</span>
+                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>2</span>
                </div>
                {/*cards*/}
                <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
@@ -221,7 +221,7 @@ function Allideas() {
               <div className='flex flex-col items-center h-full w-80 bg-yellow-300 rounded-2xl shrink-0'>
                <div className='flex items-center gap-2 px-4 py-3 border-b-2 border-yellow-400'>
                 <h1 className='font-semibold text-lg'>In Review</h1>
-                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>3</span>
+                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>1</span>
                </div>
                {/*cards*/}
                <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
@@ -236,7 +236,7 @@ function Allideas() {
               <div className='flex flex-col items-center h-full w-80 bg-yellow-300 rounded-2xl shrink-0'>
                <div className='flex items-center gap-2 px-4 py-3 border-b-2 border-yellow-400'>
                 <h1 className='font-semibold text-lg'>Completed</h1>
-                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>3</span>
+                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>1</span>
                </div>
                {/*cards*/}
                <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
@@ -251,7 +251,7 @@ function Allideas() {
               <div className='flex flex-col items-center h-full w-80 bg-yellow-300 rounded-2xl shrink-0'>
                <div className='flex items-center gap-2 px-4 py-3 border-b-2 border-yellow-400'>
                 <h1 className='font-semibold text-lg'>BrainStorming</h1>
-                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>3</span>
+                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>2</span>
                </div>
                {/*cards*/}
                <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>

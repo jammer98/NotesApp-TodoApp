@@ -1,68 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useLocation, useNavigate } from 'react-router'
 
 function AddNewIdea() {
 
   const navigate = useNavigate();
   const location = useLocation();
-  
-  const [formData, setFormData] = useState({
-    title: '',
-    description: '',
-    priority: 'medium',
-    status: 'In Progress',
-    dueDate: ''
-  });
-
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const isActive = (path) => location.pathname === path;
 
-  const validateForm = () => {
-    const newErrors = {};
-    if (!formData.title.trim()) newErrors.title = 'Title is required';
-    if (!formData.description.trim()) newErrors.description = 'Description is required';
-    if (!formData.dueDate) newErrors.dueDate = 'Due date is required';
-    return newErrors;
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: ''
-      }));
-    }
-  };
-
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const newErrors = validateForm();
-    
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
-    
-    setIsSubmitting(true);
     // Handle form submission logic here
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormData({ title: '', description: '', priority: 'medium', status: 'In Progress', dueDate: '' });
-      // Show success message or navigate
-    }, 1000);
-  };
-
-  const handleReset = () => {
-    setFormData({ title: '', description: '', priority: 'medium', status: 'In Progress', dueDate: '' });
-    setErrors({});
-  };
+  }
 
   return(
     <div className='w-full h-screen'>
@@ -180,28 +129,28 @@ function AddNewIdea() {
       </div>
 
         <div className='w-5/6 h-screen flex flex-col'>
-        <div className='flex border-b-neutral-500 border-b-2 justify-between items-center py-5'>
-          <div></div>
+        <div className='flex  border-b-neutral-500 border-b-2 justify-between items-center py-5 '>
+          <div></div> {/* this is the navabar part */}
           <div className='flex justify-center items-center gap-4 px-4'>
-            <button className='cursor-pointer hover:bg-neutral-100 p-2 rounded-lg transition-colors'>
+            <button className='cursor-pointer'>
             <svg xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke-width="1.5" 
             stroke="currentColor" 
-            className="size-6">
+            class="size-6">
             <path stroke-linecap="round" 
             stroke-linejoin="round"
             d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
           </svg>
           </button>
-          <button className='px-3 cursor-pointer hover:bg-neutral-100 p-2 rounded-lg transition-colors'>
+          <button className='px-3 cursor-pointer'>
             <svg xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke-width="1.5" 
             stroke="currentColor" 
-            className="size-6">
+            class="size-7">
           <path stroke-linecap="round" 
           stroke-linejoin="round" 
           d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -210,102 +159,52 @@ function AddNewIdea() {
           </div>
         </div>
 
-          <div className='flex flex-col h-full p-6 gap-6 overflow-y-auto'>
+          <div className='flex flex-col h-full gap-6 overflow-x-auto'>
             <div className='text-neutral-700 w-full'>
-            <div className='px-4 py-2'>
-                <h1 className='text-3xl font-bold font-["Playfair_Display"] text-neutral-900'>Add New Idea</h1>
-                <p className='font-["Montserrat"] tracking-tight text-neutral-600 mt-1'>Capture and organize your brilliant ideas</p>
+            <div className='px-4 py-4'>
+                <h1 className='text-2xl font-bold font-["Playfair_Display"]'>Add New Idea</h1>
+                <p className='font-["Montserrat"] tracking-tight '>Add your most amazing Ideas</p>
             </div>
             </div>
 
-            <div className='flex justify-center items-start rounded-2xl pb-10'>
-              <div className='w-full max-w-2xl'>
-                <form onSubmit={handleFormSubmit} className='bg-white p-8 rounded-2xl shadow-sm border border-neutral-200'>
-                  <div className='flex flex-col gap-6'>
-                    
-                    <div className='flex flex-col gap-2'>
-                      <label className='font-["Montserrat"] text-lg font-semibold text-neutral-800'>Idea Title <span className='text-red-500'>*</span></label>
-                      <input 
-                        type="text" 
-                        name="title"
-                        value={formData.title}
-                        onChange={handleInputChange}
-                        required 
-                        placeholder='Enter a compelling title for your idea' 
-                        className={`w-full h-11 rounded-lg border-2 px-4 outline-none transition-all ${errors.title ? 'border-red-400 bg-red-50' : 'border-neutral-300 focus:border-neutral-900 hover:border-neutral-400'}`}
-                      />
-                      {errors.title && <p className='text-red-500 text-sm font-["Montserrat"]'>{errors.title}</p>}
+            <div className='flex-1 flex justify-center items-center rounded-2xl'>
+              <div>
+                <form action="submit" onSubmit={handleFormSubmit} className='px-10 py-6 rounded-2xl w-2xl border-2 border-neutral-300 shadow-lg shadow-neutral-400 flex flex-col gap-6 h-screen '>
+                  <div className='flex flex-col gap-9 justify-center flex-1 '>
+                    <div className='flex flex-col '>
+                      <label className='font-["Montserrat"] font-semibold text-lg flex gap-2 mb-3 text-neutral-700'>Idea Title <p className='font-semibold text-red-500'>*</p> </label>
+                    <input type="text" required placeholder='Enter Idea Title' className='w-full h-10 rounded-md border-2 border-neutral-400 px-3 outline-none'/>
                     </div>
-
-                    <div className='flex flex-col gap-2'>
-                      <label className='font-["Montserrat"] text-lg font-semibold text-neutral-800'>Idea Description <span className='text-red-500'>*</span></label>
-                      <textarea 
-                        name="description"
-                        value={formData.description}
-                        onChange={handleInputChange}
-                        placeholder='Describe your idea in detail... What problem does it solve? Why is it important?' 
-                        className={`w-full h-28 rounded-lg border-2 px-4 py-3 outline-none resize-none transition-all ${errors.description ? 'border-red-400 bg-red-50' : 'border-neutral-300 focus:border-neutral-900 hover:border-neutral-400'}`}
-                      ></textarea>
-                      {errors.description && <p className='text-red-500 text-sm font-["Montserrat"]'>{errors.description}</p>}
+                    <div className='flex flex-col'>
+                      <label className='font-["Montserrat"] font-semibold text-lg flex gap-2 mb-3 text-neutral-700'>Idea description<p className='font-semibold text-red-500'>*</p> </label>
+                      <textarea placeholder='Enter Idea Description.....' className='w-full h-24 rounded-md border-2 border-neutral-400 px-3 py-2 outline-none resize-none'></textarea>
                     </div>
-
-                    <div className='grid grid-cols-2 gap-6'>
-                      <div className='flex flex-col gap-2'>
-                        <label className='font-["Montserrat"] text-lg font-semibold text-neutral-800'>Priority</label>
-                        <select 
-                          name="priority"
-                          value={formData.priority}
-                          onChange={handleInputChange}
-                          className='h-11 rounded-lg border-2 border-neutral-300 px-4 transition-all outline-none focus:border-neutral-900 hover:border-neutral-400 cursor-pointer bg-white'>
-                          <option value="low">Low</option>
-                          <option value="medium">Medium</option>
-                          <option value="high">High</option>
-                        </select>
-                      </div>
-
-                      <div className='flex flex-col gap-2'>
-                        <label className='font-["Montserrat"] text-lg font-semibold text-neutral-800'>Status</label>
-                        <select 
-                          name="status"
-                          value={formData.status}
-                          onChange={handleInputChange}
-                          className='h-11 rounded-lg border-2 border-neutral-300 px-4 outline-none focus:border-neutral-900 hover:border-neutral-400 cursor-pointer bg-white'>
-                          <option value="Completed">Completed</option>
-                          <option value="In Progress">In Progress</option>
-                          <option value="Not Started">Pending</option>
-                        </select>
-                      </div>
+                    <div className='flex items-center gap-5 w-full'>
+                    <div className='flex flex-col w-1/2'>
+                      <label className='font-["Montserrat"] text-lg font-semibold mb-3 flex gap-2 text-neutral-700'>Priority <p className='font-semibold text-red-500'>*</p> </label>
+                      <select defaultValue="medium" className='h-10 rounded-md border-2 border-neutral-400 px-3 transition-all duration-500 outline-none'>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                      </select>
                     </div>
-
-                    <div className='flex flex-col gap-2'>
-                      <label className='font-["Montserrat"] text-lg font-semibold text-neutral-800'>Due Date <span className='text-red-500'>*</span></label>
-                      <input 
-                        type="date" 
-                        name="dueDate"
-                        value={formData.dueDate}
-                        onChange={handleInputChange}
-                        required 
-                        className={`w-full h-11 rounded-lg border-2 px-4 outline-none transition-all ${errors.dueDate ? 'border-red-400 bg-red-50' : 'border-neutral-300 focus:border-neutral-900 hover:border-neutral-400'}`}
-                      />
-                      {errors.dueDate && <p className='text-red-500 text-sm font-["Montserrat"]'>{errors.dueDate}</p>}
+                   <div className='flex flex-col w-1/2'>
+                      <label className='font-["Montserrat"] text-lg font-semibold mb-3 flex gap-2 text-neutral-700'>Status <p className='font-semibold text-red-500'>*</p> </label>
+                      <select defaultValue="In Progress" className='h-10 rounded-md border-2 border-neutral-400 px-3'>
+                        <option value="Completed">Completed</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Not Started">Pending</option>
+                      </select>
+                    </div>
+                    </div>
+                    <div className='flex flex-col '>
+                      <label className='font-["Montserrat"] text-lg font-semibold mb-3 flex gap-2 text-neutral-700'>Due Date <p className='font-semibold text-red-500'>*</p></label>
+                      <input type="date" placeholder='Enter Due Date' className='w-96 h-10 rounded-md border-2 border-neutral-400 px-3'/>
                     </div>
                   </div>
-
-                  <div className='flex items-center justify-end gap-4 mt-8'>
-                      <button 
-                        type='button'
-                        onClick={handleReset}
-                        className='bg-neutral-100 text-neutral-900 rounded-lg px-6 py-2.5 hover:bg-neutral-200 cursor-pointer font-["Montserrat"] font-medium transition-all duration-200'
-                      >
-                        Clear
-                      </button>
-                      <button 
-                        type="submit" 
-                        disabled={isSubmitting}
-                        className='bg-neutral-900 text-white font-["Montserrat"] font-semibold rounded-lg px-8 py-2.5 hover:bg-neutral-800 disabled:opacity-60 cursor-pointer shadow-lg shadow-neutral-400/40 transition-all duration-200'
-                      >
-                        {isSubmitting ? 'Adding...' : 'Add Idea'}
-                      </button>
+                  <div className='flex items-center justify-end gap-5 mt-7'>
+                      <button type='reset' className='bg-neutral-50 text-neutral-900 rounded-2xl p-3 hover:bg-neutral-200 cursor-pointer border-2 border-neutral-600'>Cancel</button>
+                      <button type="submit" className='bg-neutral-900 text-white font-semibold rounded-2xl p-3 hover:bg-neutral-700 cursor-pointer shadow-lg shadow-neutral-500'>Add Idea</button>
                   </div>
                 </form>
               </div>
