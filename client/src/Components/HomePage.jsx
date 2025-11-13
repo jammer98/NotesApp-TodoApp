@@ -37,9 +37,12 @@ function HomePage() {
           <img src="../public/heroImage.png" alt="hero" className='w-[800px] h-[300px] object-contain'/>
         </div>
 
-        <div className='flex flex-col justify-center items-center bg-yellow-300 mx-auto p-36 w-full mt-10'>
-            <h1 className='text-7xl font-bold text-neutral-800 text-center font-["Momo_Trust_Display"] tracking-tight'> Zero Effort  <br/> Idea Tracker</h1>
+        <div className='flex flex-col justify-center items-center bg-yellow-300 mx-auto p-36 w-full mt-10 '>
+          <div className='hover:scale-110 transition-all duration-400'>
+              <h1 className='text-7xl font-bold text-neutral-800 text-center font-["Momo_Trust_Display"] tracking-tight'> Zero Effort  <br/> Idea Tracker</h1>
             <p className='text-neutral-700 mt-4 text-2xl font-["Montserrat"]'>Collect your amazing Ideas and track it effortlessly all in one place </p>
+          </div>
+            
         </div>
 
         <div className='w-full flex justify-between items-center p-20 gap-20 mt-20'>
@@ -49,16 +52,16 @@ function HomePage() {
             className='w-[750px] h-[550px] object-cover scale-110 hover:scale-120 transition-transform duration-500 ease-in-out cursor-pointer rounded-3xl' 
           />
           <div className='flex justify-center items-center w-full'>
-            <div className='bg-violet-400 p-20 rounded-2xl flex flex-col justify-center items-start gap-5 h-[550px]'>
-            <h1 className='text-4xl font-bold text-neutral-900 text-center font-["Roboto_Condensed"] tracking-tight'>Organize your ideas like a pro</h1>
+            <div className='bg-linear-to-br from-[hsl(270,91%,83%)] from-50% to-[hsl(290,56%,56%)] p-20 rounded-2xl flex flex-col justify-center items-start gap-5 h-[550px] shadow-xl shadow-neutral-400'>
+            <h1 className='text-4xl text-neutral-900 text-center font-["Momo_Trust_Display"] tracking-tight text-shadow-2xl shadow-neutral-100'>Organize your ideas like a pro</h1>
             <ul className='list-disc mt-5 text-neutral-800 text-xl pl-5 gap-2.5 flex flex-col'>
-              <li className='font-["Roboto_Condensed"] text-xl'>have a mind blowing movie ending</li>
-              <li className='font-["Roboto_Condensed"] text-xl'>composing songs </li>
-              <li className='font-["Roboto_Condensed"] text-xl'>Write a book about my life</li>
-              <li className='font-["Roboto_Condensed"] text-xl'>Deep Dive in the history of the Cosmos</li>
-              <li className='font-["Roboto_Condensed"] text-xl'>Got a amazing idea for a new App</li>
-              <li className='font-["Roboto_Condensed"] text-xl'>Got a New Startup Idea</li>
-              <li className='font-["Roboto_Condensed"] text-xl'>Got a brilliant idea for a podcast</li>
+              <li className='font-["Montserrat"] font-semibold text-md tracking-tighter'>have a mind blowing movie ending</li>
+              <li className='font-["Montserrat"] font-semibold text-md tracking-tighter'>composing songs </li>
+              <li className='font-["Montserrat"] font-semibold text-md tracking-tighter'>Write a book about my life</li>
+              <li className='font-["Montserrat"] font-semibold text-md tracking-tighter'>Deep Dive in the history of the Cosmos</li>
+              <li className='font-["Montserrat"] font-semibold text-md tracking-tighter'>Got a amazing idea for a new App</li>
+              <li className='font-["Montserrat"] font-semibold text-md tracking-tighter'>Got a New Startup Idea</li>
+              <li className='font-["Montserrat"] font-semibold text-md tracking-tighter'>Got a brilliant idea for a podcast</li>
             </ul>
             </div>
           </div>
