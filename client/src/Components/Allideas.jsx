@@ -154,6 +154,7 @@ function Allideas() {
           </div>
         </div>
 
+        <div className='flex-1 flex flex-col overflow-x-auto bg-red-200'>
           <div className='text-neutral-700 w-full'>
             <div className='px-4 py-2'>
                 <h1 className='text-2xl font-semibold font-["Playfair_Display"]'>All Ideas</h1>
@@ -161,9 +162,117 @@ function Allideas() {
             </div>
             </div>
 
-             <div className='flex-1 flex justify-center items-center'>
-              <p>this is the body of the progress.</p>
+             <div className='flex-1 flex items-center justify-between bg-blue-200 overflow-y-auto px-10 py-5 min-w-max gap-5'>
+
+              <div className='flex flex-col items-center h-full w-80 bg-yellow-300 rounded-2xl shrink-0'>
+               <div className='flex items-center gap-2 px-4 py-3 border-b-2 border-yellow-400'>
+                <h1 className='font-semibold text-lg'>In Progress</h1>
+                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>3</span>
+               </div>
+               {/*cards*/}
+               <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+                <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Maths Assignment</h3>
+                <p className='text-center line-clamp-2 text-sm'>Calulus-II</p>
+                <div className='flex items-center gap-4 justify-between mt-3'>
+                  <div className='inline-block rounded-lg bg-red-400 text-white px-2 py-1 text-xs font-bold text-shadow-xs text-shadow-neutral-600'>High</div>
+                  <span>Due:12/11/2015</span>
+                </div>
+               </div>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+                <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Website Design</h3>
+                <p className='text-center line-clamp-2 text-sm'>Dashboard Ongoing</p>
+                <div className='flex items-center gap-4 justify-between mt-3'>
+                  <div className='inline-block rounded-lg bg-yellow-400 text-white px-2 py-1 text-xs font-bold text-shadow-xs text-shadow-neutral-600'>Medium</div>
+                  <span>Due:30/11/2015</span>
+                </div>
+               </div>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+                <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>New Egg recipe</h3>
+                <p className='text-center line-clamp-2 text-sm'>Boiled Egg recipe with salt and pepper</p>
+                <div className='flex items-center gap-4 justify-between mt-3'>
+                  <div className='inline-block rounded-lg bg-blue-400 text-white px-2 py-1 text-xs font-bold text-shadow-xs text-shadow-neutral-600'>Low</div>
+                  <span>Due:12/12/2015</span>
+                </div>
+               </div>
+              </div>
+              <div className='flex flex-col items-center h-full w-80 bg-yellow-300 rounded-2xl shrink-0'>
+               <div className='flex items-center gap-2 px-4 py-3 border-b-2 border-yellow-400'>
+                <h1 className='font-semibold text-lg'>Pending</h1>
+                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>3</span>
+               </div>
+               {/*cards*/}
+               <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+                <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Backend</h3>
+                <p className='text-center line-clamp-2 text-sm'>Website Backend in express</p>
+                <div className='flex items-center gap-4 justify-between mt-3'>
+                  <div className='inline-block rounded-lg bg-red-400 text-white px-2 py-1 text-xs font-bold text-shadow-xs text-shadow-neutral-600'>High</div>
+                  <span>Due:16/11/2015</span>
+                </div>
+               </div>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+                <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Guitar</h3>
+                <p className='text-center line-clamp-2 text-sm'>Guitar new song comspose</p>
+                <div className='flex items-center gap-4 justify-between mt-3'>
+                  <div className='inline-block rounded-lg bg-blue-400 text-white px-2 py-1 text-xs font-bold text-shadow-xs text-shadow-neutral-600'>Low</div>
+                  <span>Due:02/12/2015</span>
+                </div>
+               </div>
+              </div>
+              <div className='flex flex-col items-center h-full w-80 bg-yellow-300 rounded-2xl shrink-0'>
+               <div className='flex items-center gap-2 px-4 py-3 border-b-2 border-yellow-400'>
+                <h1 className='font-semibold text-lg'>In Review</h1>
+                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>3</span>
+               </div>
+               {/*cards*/}
+               <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+                <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Major Project</h3>
+                <p className='text-center line-clamp-2 text-sm'>college project work</p>
+                <div className='flex items-center gap-4 justify-between mt-3'>
+                  <div className='inline-block rounded-lg bg-red-400 text-white px-2 py-1 text-xs font-bold text-shadow-xs text-shadow-neutral-600'>High</div>
+                  <span>Due:12/11/2015</span>
+                </div>
+               </div>
+              </div>
+              <div className='flex flex-col items-center h-full w-80 bg-yellow-300 rounded-2xl shrink-0'>
+               <div className='flex items-center gap-2 px-4 py-3 border-b-2 border-yellow-400'>
+                <h1 className='font-semibold text-lg'>Completed</h1>
+                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>3</span>
+               </div>
+               {/*cards*/}
+               <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+                <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>CURD API & DB</h3>
+                <p className='text-center line-clamp-2 text-sm'>api and database CURD learn</p>
+                <div className='flex items-center gap-4 justify-between mt-3'>
+                  <div className='inline-block rounded-lg bg-green-400 text-white px-2 py-1 text-xs font-bold text-shadow-xs text-shadow-neutral-600'>Done</div>
+                  <span>On:07/11/2015</span>
+                </div>
+               </div>
+              </div>
+              <div className='flex flex-col items-center h-full w-80 bg-yellow-300 rounded-2xl shrink-0'>
+               <div className='flex items-center gap-2 px-4 py-3 border-b-2 border-yellow-400'>
+                <h1 className='font-semibold text-lg'>BrainStorming</h1>
+                <span className='ml-auto bg-yellow-500 text-white rounded-full w-6 h-6 flex justify-center items-center font-bold'>3</span>
+               </div>
+               {/*cards*/}
+               <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+                <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Astronomy</h3>
+                <p className='text-center line-clamp-2 text-sm'>Effects of ketu and mars on individual</p>
+                <div className='flex items-center gap-4 justify-between mt-3'>
+                  <div className='inline-block rounded-lg bg-yellow-400 text-white px-2 py-1 text-xs font-bold text-shadow-xs text-shadow-neutral-600'>Medium</div>
+                  <span>Due:12/11/2015</span>
+                </div>
+               </div>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-red-300 m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+                <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Dune What If!</h3>
+                <p className='text-center line-clamp-2 text-sm'>Dune Ending with a twist of what if!!</p>
+                <div className='flex items-center gap-4 justify-between mt-3'>
+                  <div className='inline-block rounded-lg bg-blue-400 text-white px-2 py-1 text-xs font-bold text-shadow-xs text-shadow-neutral-600'>Low</div>
+                  <span>Due:12/11/2015</span>
+                </div>
+               </div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -171,3 +280,8 @@ function Allideas() {
 }
 
 export default Allideas
+
+
+// inside cardd heights 
+// className='min-h-20'  // Minimum 80px
+// className='max-h-96'  // Maximum 384px (scrolls if needed)
