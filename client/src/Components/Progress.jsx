@@ -1,5 +1,24 @@
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router'
+import { Bar } from 'react-chartjs-2'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js'
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+)
 
 function Progress() {
 
@@ -7,6 +26,121 @@ function Progress() {
   const location = useLocation();
 
   const isActive = (path) => location.pathname === path ;
+
+  const chartData = {
+    labels: ['Total Ideas', 'In Progress', 'Completed', 'Pending', 'In Review', 'BrainStorming'],
+    datasets: [
+      {
+        label: 'Ideas Count',
+        data: [4, 2, 1, 1, 2, 1],
+        backgroundColor: [
+          '#DBEAFE', // blue-100
+          '#FEF3C7', // amber-100
+          '#DCFCE7', // green-100
+          '#E0F2FE', // sky-100
+          '#FFEDD5', // orange-100
+          '#F3E8FF', // purple-100
+        ],
+        borderColor: [
+          '#3B82F6', // blue-500
+          '#F59E0B', // amber-500
+          '#22C55E', // green-500
+          '#0EA5E9', // sky-500
+          '#F97316', // orange-500
+          '#A855F7', // purple-500
+        ],
+        borderWidth: 2,
+        borderRadius: 8,
+        hoverBackgroundColor: [
+          '#BFDBFE', // blue-200
+          '#FCD34D', // amber-300
+          '#BBF7D0', // green-200
+          '#BAE6FD', // sky-200
+          '#FED7AA', // orange-200
+          '#E9D5FF', // purple-200
+        ],
+      }
+    ]
+  }
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: true,
+    plugins: {
+      legend: {
+        position: 'right',
+        labels: {
+          font: {
+            size: 14,
+            family: '"Montserrat", sans-serif',
+            weight: '500'
+          },
+          padding: 20,
+          color: '#404040'
+        }
+      },
+      title: {
+        display: true,
+        text: 'Ideas Status Distribution',
+        font: {
+          size: 18,
+          family: '"Playfair_Display", serif',
+          weight: 'bold'
+        },
+        color: '#171717',
+        padding: 20
+      },
+      tooltip: {
+        backgroundColor: '#1F2937',
+        padding: 12,
+        titleFont: {
+          size: 15,
+          weight: 'bold'
+        },
+        bodyFont: {
+          size: 13
+        },
+        borderColor: '#D1D5DB',
+        borderWidth: 1,
+        displayColors: true,
+        callbacks: {
+          label: function(context) {
+            return context.label + ': ' + context.parsed.y + ' ideas'
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          font: {
+            size: 12,
+            family: '"Montserrat", sans-serif'
+          },
+          color: '#6B7280',
+          stepSize: 1
+        },
+        grid: {
+          color: '#E5E7EB',
+          drawBorder: false
+        }
+      },
+      x: {
+        ticks: {
+          font: {
+            size: 12,
+            family: '"Montserrat", sans-serif'
+          },
+          color: '#6B7280'
+        },
+        grid: {
+          display: false,
+          drawBorder: false
+        }
+      }
+    }
+  }
 
   return(
     <div className='w-full h-screen'>
@@ -161,8 +295,10 @@ function Progress() {
             </div>
             </div>
 
-            <div className='flex-1 flex justify-center items-center'>
-              <p>All the charts and the graphs will be here.</p>
+            <div className='flex-1 flex justify-center items-center p-6'>
+              <div className='w-full h-full bg-white rounded-2xl shadow-md border border-neutral-200 p-8'>
+                <Bar data={chartData} options={chartOptions} />
+              </div>
             </div>
         </div>
       </div>
