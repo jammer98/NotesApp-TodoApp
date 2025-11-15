@@ -170,7 +170,7 @@ function Allideas() {
                 <span className='ml-auto bg-yellow-400 text-[hsl(209,100%,19%)] rounded-full w-6 h-6 flex justify-center items-center font-bold'>3</span>
                </div>
                {/*cards*/}
-               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 min-w-65 max-w-70 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
                 <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Maths Assignment</h3>
                 <p className='text-center line-clamp-2 text-sm'>Calulus-II</p>
                 <div className='flex items-center gap-4 justify-between mt-3'>
@@ -178,7 +178,7 @@ function Allideas() {
                   <span>Due:12/11/2015</span>
                 </div>
                </div>
-               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex min-w-65 max-w-70 flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
                 <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Website Design</h3>
                 <p className='text-center line-clamp-2 text-sm'>Dashboard Ongoing</p>
                 <div className='flex items-center gap-4 justify-between mt-3'>
@@ -186,7 +186,7 @@ function Allideas() {
                   <span>Due:30/11/2015</span>
                 </div>
                </div>
-               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col max-w-70 min-w-65 justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
                 <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>New Egg recipe</h3>
                 <p className='text-center line-clamp-2 text-sm'>Boiled Egg recipe with salt and pepper</p>
                 <div className='flex items-center gap-4 justify-between mt-3'>
@@ -201,7 +201,7 @@ function Allideas() {
                 <span className='ml-auto bg-yellow-400 text-[hsl(209,100%,19%)] rounded-full w-6 h-6 flex justify-center items-center font-bold'>2</span>
                </div>
                {/*cards*/}
-               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col min-w-65 max-w-70 justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
                 <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Backend</h3>
                 <p className='text-center line-clamp-2 text-sm'>Website Backend in express</p>
                 <div className='flex items-center gap-4 justify-between mt-3'>
@@ -209,7 +209,7 @@ function Allideas() {
                   <span>Due:16/11/2015</span>
                 </div>
                </div>
-               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col  min-w-65 max-w-70 justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
                 <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Guitar</h3>
                 <p className='text-center line-clamp-2 text-sm'>Guitar new song comspose</p>
                 <div className='flex items-center gap-4 justify-between mt-3'>
@@ -224,7 +224,7 @@ function Allideas() {
                 <span className='ml-auto bg-yellow-400 text-[hsl(209,100%,19%)] rounded-full w-6 h-6 flex justify-center items-center font-bold'>1</span>
                </div>
                {/*cards*/}
-               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col min-w-65 max-w-70 justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
                 <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Major Project</h3>
                 <p className='text-center line-clamp-2 text-sm'>college project work</p>
                 <div className='flex items-center gap-4 justify-between mt-3'>
@@ -239,7 +239,7 @@ function Allideas() {
                 <span className='ml-auto bg-yellow-400 text-[hsl(209,100%,19%)] rounded-full w-6 h-6 flex justify-center items-center font-bold'>1</span>
                </div>
                {/*cards*/}
-               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col min-w-65 max-w-70 justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
                 <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>CURD API & DB</h3>
                 <p className='text-center line-clamp-2 text-sm'>api and database CURD learn</p>
                 <div className='flex items-center gap-4 justify-between mt-3'>
@@ -254,7 +254,7 @@ function Allideas() {
                 <span className='ml-auto bg-yellow-400 text-[hsl(209,100%,19%)] rounded-full w-6 h-6 flex justify-center items-center font-bold'>2</span>
                </div>
                {/*cards*/}
-               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col min-w-65 max-w-70 justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
                 <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Astronomy</h3>
                 <p className='text-center line-clamp-2 text-sm'>Effects of ketu and mars on individual</p>
                 <div className='flex items-center gap-4 justify-between mt-3'>
@@ -262,7 +262,7 @@ function Allideas() {
                   <span>Due:12/11/2015</span>
                 </div>
                </div>
-               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
+               <div className='rounded-2xl min-h-24 max-h-96 bg-[hsl(208,100%,97%)] m-4 p-5 flex flex-col min-w-65 max-w-70 justify-between shadow-md shadow-neutral-500 hover:scale-105 transition-all duration-200 cursor-pointer'>
                 <h3 className='text-center line-clamp-2 font-semibold text-md font-["Montserrat"]'>Dune What If!</h3>
                 <p className='text-center line-clamp-2 text-sm'>Dune Ending with a twist of what if!!</p>
                 <div className='flex items-center gap-4 justify-between mt-3'>

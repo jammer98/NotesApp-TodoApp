@@ -77,7 +77,7 @@ function HomePage() {
           </ul>
           </div>
           <div className='flex justify-center items-center w-1/2 h-[600px]'>
-                <button onClick={()=> navigate("/Dashboard")} className='bg-[hsl(233,100%,90%)] p-4 rounded-2xl border-3 border-[hsl(0,0%,100%)] text-neutral-800 text-3xl font-["Roboto_Condensed"] flex items-center justify-center gap-3 hover:text-4xl cursor-pointer transition-all duration-400'>
+                <button onClick={()=> navigate("/Dashboard")} className='bg-[hsl(233,100%,90%)] p-4 rounded-2xl border-3 border-[hsl(0,0%,100%)] text-neutral-800 text-3xl font-["Roboto_Condensed"] flex items-center justify-center gap-3 hover:text-4xl cursor-pointer transition-all duration-400 shadow-2xl shadow-neutral-400'>
                  <p>Go to DashBoard</p>
                  <svg xmlns="http://www.w3.org/2000/svg" 
                  fill="none" 

@@ -65,7 +65,7 @@ function Progress() {
 
   const chartOptions = {
     responsive: true,
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'right',
@@ -296,7 +296,7 @@ function Progress() {
             </div>
 
             <div className='flex-1 flex justify-center items-center p-6'>
-              <div className='w-full h-full bg-white rounded-2xl shadow-md border border-neutral-200 p-8'>
+              <div className='w-2/3 h-90 bg-white rounded-2xl shadow-md border border-neutral-200 p-8'>
                 <Bar data={chartData} options={chartOptions} />
               </div>
             </div>
