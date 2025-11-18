@@ -151,11 +151,9 @@ function User() {
           </div>
         </div>
 
-        <div className='w-full h-[90%] bg-black flex justify-center items-center'>
-            <div>
-                <p className='bg-neutral-700 rounded-3xl py-6 px-5 text-3xl font-["Playfair_Display"] font-semibold text-white tracking-tight'>This is the User Page </p>
-                <p className='bg-neutral-400 font-semibold text-2xl'>login div</p>
-                <p className='bg-neutral-400 font-semibold text-2xl'>use setting</p>
+        <div className='w-full h-[90vh] flex justify-center items-center overflow-x-auto'>
+          <div className='text-neutral-700 text-3xl'>
+            User Page Coming Soon!
             </div>
         </div>
         </div>
