@@ -6,6 +6,9 @@ dotenv.config({
     path: './env'
 })
 
+
+// we will use postgress as our data base
+// as we have to connect to database first before starting the server
 connectToDatabase()
     .then(() =>{
         app.on("error" ,(error)=>{
