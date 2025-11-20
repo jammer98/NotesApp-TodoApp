@@ -155,6 +155,9 @@ function User() {
           <div className='text-neutral-700 text-3xl'>
             User Page Coming Soon!
             </div>
+            <div>
+            <img src="../public/comingsoon.png" alt="coming soon" className='w-96 h-96' />
+            </div>
         </div>
         </div>
       </div>
