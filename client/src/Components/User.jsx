@@ -158,6 +158,12 @@ function User() {
             <div>
             <img src="../public/comingsoon.png" alt="coming soon" className='w-96 h-96' />
             </div>
+            <div>
+              this is the for just the commit message not some serious 
+            </div>
+            <div>
+              this is the main function of the app
+            </div>
         </div>
         </div>
       </div>
