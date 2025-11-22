@@ -73,7 +73,7 @@ function Dashboard() {
       </div>
 
       {/* Main Content Area */}
-      <div className='w-5/6 h-screen flex flex-col '>
+      <div className='w-5/6 h-screen flex flex-col bg-amber-700'>
         {/* Top Header */}
         <div className='flex border-b-neutral-500 border-b-2 justify-between items-center py-5 bg-white'>
           <div></div>
@@ -93,7 +93,7 @@ function Dashboard() {
 
         {/* Content */}
         <div className='flex-1 overflow-y-auto'>
-          <div className='text-neutral-700 w-full'>
+          <div className='text-neutral-800 w-full'>
             {/* Page Title */}
             <div className='flex items-center justify-between px-4 py-2'>
               <div className='px-4 py-4'>
