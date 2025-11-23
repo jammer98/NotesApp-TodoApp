@@ -9,8 +9,7 @@ app.use(cors({
 }))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/api/notes', require('./routes/noteRoutes'));
-app.use('/api/viewAllNotes',require('./routes/viewAllNotesRoutes'));
+app.use('/api/users', require('./Routes/user.routes'));
 
 
 export default app;
