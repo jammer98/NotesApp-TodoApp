@@ -1,22 +1,26 @@
-const RegisterUser = () =>{
-    const {username, password,email,githubId} = req.body;
+import { ApiError } from "../utils/ApiError";
+import { asyncHandler } from "../utils/AsyncHandler.js";
+import { ApiRespone } from "../utils/ApiResponse";
 
-    if(!username || !password || !email){
-        return resizeBy.status(400).json({message: "Username, password and email are required"});
+
+const RegsiterUser = asyncHandler(async(req,res)=>{
+    const { username , email , password } = req.body;
+
+    if(!email || !password || !username){
+        throw new ApiError(400,"All fields are required");
     }
 
-    // Further logic to register the user
-}
+    // save this in the database 
+})
 
-const LoginUser = () =>{
-    const {username,password} = req.body;
+const LoginUser = asyncHandler(async(req,res)=>{
+    const { username , password } = req.body;
 
     if(!username || !password){
-        return res.status(400).json({message: "Username and password are required"});
+        throw new ApiError(400,"username and password is required");
     }
 
-    // Further logic to login the user
-}
+    // database check with the username and the hashed password
+})
 
-
-export {RegisterUser, LoginUser};
+export { RegsiterUser , LoginUser }
