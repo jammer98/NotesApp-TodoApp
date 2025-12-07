@@ -100,7 +100,7 @@ function Dashboard() {
                 <h1 className='text-2xl font-bold font-["Playfair_Display"]'>DashBoard</h1>
                 <p className='font-["Montserrat"] tracking-tight'>Create your ideas and work on it and track your progress</p>
               </div>
-              <button onClick={() => navigate("/AddNewIdea")} className='flex items-center gap-3 bg-neutral-100 text-neutral-800 rounded-xl px-3 py-2 cursor-pointer hover:bg-neutral-50'>
+              <button onClick={() => navigate("/AddNewIdea")} className='flex items-center gap-3 bg-neutral-300 text-neutral-800 rounded-xl px-3 py-2 cursor-pointer hover:bg-neutral-200 border-2 border-neutral-600 shadow-md shadow-neutral-200'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
