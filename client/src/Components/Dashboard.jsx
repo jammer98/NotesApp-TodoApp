@@ -73,7 +73,7 @@ function Dashboard() {
       </div>
 
       {/* Main Content Area */}
-      <div className='w-5/6 h-screen flex flex-col bg-amber-700'>
+      <div className='w-5/6 h-screen flex flex-col bg-neutral-50'>
         {/* Top Header */}
         <div className='flex border-b-neutral-500 border-b-2 justify-between items-center py-5 bg-white'>
           <div></div>

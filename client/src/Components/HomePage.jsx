@@ -42,7 +42,6 @@ function HomePage() {
               <h1 className='text-7xl font-bold text-neutral-800 text-center font-["Momo_Trust_Display"] tracking-tight'> Zero Effort  <br/> Idea Tracker</h1>
             <p className='text-neutral-700 mt-4 text-2xl font-["Montserrat"]'>Collect your amazing Ideas and track it effortlessly all in one place </p>
           </div>
-            
         </div>
 
         <div className='w-full flex justify-between items-center p-20 gap-20 mt-20'>
