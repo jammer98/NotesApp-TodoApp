@@ -183,7 +183,7 @@ function Dashboard() {
                     <div className='text-lg'>Startup Idea</div>
                     <div className='w-auto flex gap-2 mt-2 items-center'>
                       <div className='bg-red-400 text-white rounded-2xl px-2 py-1 text-sm font-["Montserrat"]'>High</div>
-                      <div>Due : 02/11/2025</div>
+                      <div>Due : 10/12/2025</div>
                     </div>
                   </div>
                   <div className='w-40 px-2 py-1 text-lg rounded-xl text-center tracking-tight bg-amber-100 opacity-90 text-amber-900 font-["Montserrat"] border-l-4 border-amber-500 '>In progress</div>
