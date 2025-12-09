@@ -154,6 +154,10 @@ function User() {
         <div className='w-full h-[90vh] flex justify-center items-center overflow-x-auto'>
           <div className='text-neutral-700 text-3xl'>
             User Page Coming Soon!
+            this will contain the user details 
+            and other important information
+            <div>
+              more details will be added soon
             </div>
             <div>
             <img src="../public/comingsoon.png" alt="coming soon" className='w-96 h-96' />
