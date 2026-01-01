@@ -10,7 +10,7 @@ function Dashboard() {
   return (
     <div className='w-full h-screen flex'>
       {/* Sidebar */}
-      <div className='w-1/6 h-screen flex flex-col justify-between border-r-2 border-neutral-500 '>
+      <div className='w-1/6 h-screen flex flex-col justify-between border-r-2 border-neutral-500 bg-red-400 px-4'>
         <div className='flex flex-col gap-8 py-8 h-auto justify-center items-start'>
           <button onClick={() => navigate("/")} className='flex gap-3 items-center px-5 cursor-pointer'>
             <img src="../public/logo.png" alt="logo" className="w-10 h-10 rounded-full" />
