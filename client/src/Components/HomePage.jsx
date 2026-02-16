@@ -51,9 +51,9 @@ function HomePage() {
             className='w-[750px] h-[550px] object-cover scale-110 hover:scale-120 transition-transform duration-500 ease-in-out cursor-pointer rounded-3xl' 
           />
           <div className='flex justify-center items-center w-full'>
-            <div className='bg-linear-to-br from-[hsl(270,91%,83%)] from-50% to-[hsl(290,56%,56%)] p-20 rounded-2xl flex flex-col justify-center items-start gap-5 h-[550px] shadow-xl shadow-neutral-400'>
-            <h1 className='text-4xl text-neutral-900 text-center font-["Momo_Trust_Display"] tracking-tight text-shadow-2xl shadow-neutral-100'>Organize your ideas like a pro</h1>
-            <ul className='list-disc mt-5 text-neutral-800 text-xl pl-5 gap-2.5 flex flex-col'>
+            <div className='bg-[#960018] p-20 rounded-2xl flex flex-col justify-center items-start gap-5 h-[550px] shadow-xl shadow-neutral-400'>
+            <h1 className='text-4xl text-[#FAEBD7] text-center font-["Momo_Trust_Display"] tracking-tight text-shadow-2xl shadow-neutral-100'>Organize your ideas like a pro</h1>
+            <ul className='list-disc mt-5 text-[#FAEBD7] text-xl pl-5 gap-2.5 flex flex-col'>
               <li className='font-["Montserrat"] font-semibold text-md tracking-tighter'>have a mind blowing movie ending</li>
               <li className='font-["Montserrat"] font-semibold text-md tracking-tighter'>composing songs </li>
               <li className='font-["Montserrat"] font-semibold text-md tracking-tighter'>Write a book about my life</li>

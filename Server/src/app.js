@@ -9,7 +9,11 @@ app.use(cors({
 }))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/api/users', require('./Routes/user.routes'));
+
+
+import userrouter from './Routes/user.routes.js';
+
+app.use("/api/v1/users",userrouter);
 
 
 export default app;

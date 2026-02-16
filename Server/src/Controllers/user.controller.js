@@ -1,7 +1,7 @@
-import { ApiError } from "../utils/ApiError";
+import { ApiError } from "../utils/ApiError.js";
 import { asyncHandler } from "../utils/AsyncHandler.js";
-import { ApiRespone } from "../utils/ApiResponse";
-
+import { ApiRespone } from "../utils/ApiResponse.js";
+import pool from "../Database/connectDB.js";
 
 const RegsiterUser = asyncHandler(async(req,res)=>{
     const { username , email , password } = req.body;
@@ -23,4 +23,12 @@ const LoginUser = asyncHandler(async(req,res)=>{
     // database check with the username and the hashed password
 })
 
-export { RegsiterUser , LoginUser }
+const getallusers = asyncHandler(async(req,res)=>{
+    // get all users from the database and send it to the client
+    const results = await pool.query("SELECT * FROM users");
+
+    res.status(200).json(new ApiRespone(200,"All users fetched successfully",results.rows));
+    
+})
+
+export { RegsiterUser , LoginUser , getallusers }
