@@ -19,7 +19,7 @@ function LoginPage() {
                     <div className='p-4 w-full text-center text-4xl font-["Playfair_Display"] tracking-tight text-neutral-700 font-bold'>Welcome Back</div>
                     <div className='text-center'>Enter your details</div>
                 </div>
-                <input type="email" placeholder='Email' className='p-4 w-full border-2 border-neutral-400 rounded-2xl outline-1 outline-neutral-100 hover:outline-2 hover:outline-neutral-500'/>
+                <input type="text" placeholder='username' className='p-4 w-full border-2 border-neutral-400 rounded-2xl outline-1 outline-neutral-100 hover:outline-2 hover:outline-neutral-500'/>
                 <input type="password" placeholder='Password' className='p-4 w-full border-2 border-neutral-400 rounded-2xl outline-1 outline-neutral-100 hover:outline-2 hover:outline-neutral-500' />
                 <button type='submit' className='bg-violet-400 w-full p-4 rounded-full cursor-pointer hover:bg-violet-300 transition-all duration-200 text-xl font-["Montserrat"] font-medium text-white'>Login</button>
             </form>
