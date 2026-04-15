@@ -8,6 +8,7 @@ import AddNewIdea from './Components/AddNewIdea.jsx'
 import Allideas from './Components/Allideas.jsx'
 import Progress from './Components/Progress.jsx'
 import User from './Components/User.jsx'
+import Journal from './Components/Jounrnal.jsx'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       <Route path='/Allideas' element={<Allideas/>} />
       <Route path='/Progress' element={<Progress/>} />
       <Route path='/User' element={<User/>} />
+      <Route path='/Journal' element={<Journal/>} />
     </Routes>
     </>
   )

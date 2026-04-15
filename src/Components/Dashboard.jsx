@@ -10,7 +10,7 @@ function Dashboard() {
   return (
     <div className='w-full h-screen flex'>
       {/* Sidebar */}
-      <div className='w-1/6 h-screen flex flex-col justify-between border-r-2 border-neutral-500 '>
+      <div className='w-1/6 h-screen flex flex-col justify-between border-r-2 border-neutral-500 bg-red-400 px-4'>
         <div className='flex flex-col gap-8 py-8 h-auto justify-center items-start'>
           <button onClick={() => navigate("/")} className='flex gap-3 items-center px-5 cursor-pointer'>
             <img src="../public/logo.png" alt="logo" className="w-10 h-10 rounded-full" />
@@ -60,6 +60,22 @@ function Dashboard() {
               </div>
               <p className='font-["Montserrat"]'>Collaborate</p>
             </button>
+
+            <button onClick={()=> navigate('/Journal')} className={`w-full rounded-xl py-2 flex gap-2 items-center transition-all duration-200 cursor-pointer ${isActive("/Journal") ? "bg-neutral-300 " : "hover:bg-neutral-200"}`}>
+              <div className='px-3'>
+                <svg xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke-width="1.5" 
+              stroke="currentColor" 
+              class="size-6">
+              <path stroke-linecap="round" 
+              stroke-linejoin="round" 
+              d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+            </svg>
+              </div>
+              <p className='font-["Montserrat"]'>Journal</p>
+            </button>
           </div>
         </div>
         <button onClick={() => navigate('/User')} className='w-full h-auto py-5 px-3 flex items-center hover:bg-neutral-200 cursor-pointer'>
@@ -100,7 +116,7 @@ function Dashboard() {
                 <h1 className='text-2xl font-bold font-["Playfair_Display"]'>DashBoard</h1>
                 <p className='font-["Montserrat"] tracking-tight'>Create your ideas and work on it and track your progress</p>
               </div>
-              <button onClick={() => navigate("/AddNewIdea")} className='flex items-center gap-3 bg-neutral-300 text-neutral-800 rounded-xl px-3 py-2 cursor-pointer hover:bg-neutral-200 border-2 border-neutral-600 shadow-md shadow-neutral-200'>
+              <button onClick={() => navigate("/AddNewIdea")} className='flex items-center gap-3 bg-neutral-100 text-neutral-800 rounded-xl px-3 py-2 cursor-pointer hover:bg-neutral-200 border-2 border-neutral-600 shadow-md shadow-neutral-200'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
@@ -183,7 +199,7 @@ function Dashboard() {
                     <div className='text-lg'>Startup Idea</div>
                     <div className='w-auto flex gap-2 mt-2 items-center'>
                       <div className='bg-red-400 text-white rounded-2xl px-2 py-1 text-sm font-["Montserrat"]'>High</div>
-                      <div>Due : 02/11/2025</div>
+                      <div>Due : 10/12/2025</div>
                     </div>
                   </div>
                   <div className='w-40 px-2 py-1 text-lg rounded-xl text-center tracking-tight bg-amber-100 opacity-90 text-amber-900 font-["Montserrat"] border-l-4 border-amber-500 '>In progress</div>

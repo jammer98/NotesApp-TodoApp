@@ -23,7 +23,7 @@ function Register() {
                     <img
                     src="/Leftt.png"
                     alt="Left Decoration"
-                    className="relative scale-250 w-[180px] h-[250px] ml-28"
+                    className="relative scale-250 w-[180px] h-65 ml-28"
                     />
             </div>
             <form action="submit" className='bg-neutral-200 p-10 flex flex-col items-center justify-center rounded-2xl h-full w-sm gap-7' onSubmit={handleRegsiter} >
