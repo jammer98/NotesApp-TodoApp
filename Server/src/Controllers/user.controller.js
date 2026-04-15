@@ -1,22 +1,26 @@
 import { ApiError } from "../utils/ApiError.js";
 import { asyncHandler } from "../utils/AsyncHandler.js";
-import { ApiRespone } from "../utils/ApiResponse.js";
+import { ApiResponse } from "../utils/ApiResponse.js";
 import pool from "../Config/connectDB.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import { generateToken, generateRefreshToken } from "../utils/genrateToken.js";
+
+
+
 
 const RegisterUser = asyncHandler(async(req,res)=>{
-    const {username , email , password_hash } = req.body;
+    const {username , email , password } = req.body;
 
-    if(!email || !password_hash || !username){
+    if(!email || !password || !username){
         throw new ApiError(400,"All fields are required");
     }
 
     const saltRounds = 10;
-    const password = await bcrypt.hash(password_hash, saltRounds);
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-    const response = await pool.query("INSERT INTO users (username,email,password_hash) VALUES ($1,$2,$3) RETURNING users_id,username,email,created_at",[username,email,password]);
-    res.status(201).json(new ApiRespone(201,"User registered successfully",response.rows[0]));
+    const response = await pool.query("INSERT INTO users (username,email,password_hash) VALUES ($1,$2,$3) RETURNING *",[username,email,hashedPassword]);
+    res.status(201).json(new ApiResponse(201,"User registered successfully",response.rows[0]));
 })
 
 const LoginUser = asyncHandler(async(req,res)=>{
@@ -37,12 +41,23 @@ const LoginUser = asyncHandler(async(req,res)=>{
     const isPasswordMatch = await bcrypt.compare(password, user.password_hash);
 
     if(!isPasswordMatch){
-        throw new ApiError(401,"Invalid password");
+        throw new ApiError(401,"Invalid credentials");
     }
 
-    const token = jwt.sign({ userId: user.users_id }, process.env.JWT_SECRET, { expiresIn: '1d' });
+    const accesstoken = generateToken(user);
+    const refreshToken = generateRefreshToken(user);
 
-    res.status(200).json(new ApiRespone(200,"User logged in successfully",{ token }));
+ await pool.query(
+    "UPDATE users SET refresh_token=$1 WHERE id=$2",
+    [refreshToken, user.user_id]
+  );
+
+  res.cookie("refreshToken", refreshToken, {
+    httpOnly: true,
+    secure:false, // Set to true in production
+  });
+
+    res.status(200).json(new ApiResponse(200,"User logged in successfully",{ accesstoken }));
 })
 
 
@@ -51,7 +66,7 @@ const getallusers = asyncHandler(async(req,res)=>{
     
     const results = await pool.query("SELECT * FROM users");
 
-    res.status(200).json(new ApiRespone(200,"All users fetched successfully",results.rows));
+    res.status(200).json(new ApiResponse(200,"All users fetched successfully",results.rows));
     
 })
 
