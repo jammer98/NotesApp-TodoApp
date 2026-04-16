@@ -9,8 +9,6 @@ import { generateToken, generateRefreshToken } from "../utils/genrateToken.js";
 const RegisterUser = asyncHandler(async(req,res)=>{
     const {username , email , password } = req.body;
 
-    // console.log("register request",req);
-
     if(!email || !password || !username){
         throw new ApiError(400,"All fields are required");
     }
@@ -25,7 +23,6 @@ const RegisterUser = asyncHandler(async(req,res)=>{
 const LoginUser = asyncHandler(async(req,res)=>{
     const { username , password } = req.body;
 
-    console.log(req);
 
     if(!username || !password){
         throw new ApiError(400,"username and password is required");
@@ -61,8 +58,6 @@ const LoginUser = asyncHandler(async(req,res)=>{
     res.status(200).json(new ApiResponse(200,"User logged in successfully",{ accesstoken }));
 })
 
-
-
 const getallusers = asyncHandler(async(req,res)=>{
     
     const results = await pool.query("SELECT * FROM USERS");
@@ -71,4 +66,14 @@ const getallusers = asyncHandler(async(req,res)=>{
     
 })
 
-export { RegisterUser , LoginUser , getallusers }
+const getuserbyId = asyncHandler(async(req,res)=>{
+    const { id } = req.params;
+
+    
+
+    const response = await pool.query("SELECT * FROM users WHERE users_id = $1",[id]);
+    res.status(200).json(new ApiResponse(200,"User fetched successfully",response.rows[0]));
+})
+
+
+export { RegisterUser , LoginUser , getallusers , getuserbyId }
