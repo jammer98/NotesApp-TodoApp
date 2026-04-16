@@ -3,14 +3,13 @@ import { asyncHandler } from "../utils/AsyncHandler.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 import pool from "../Config/connectDB.js";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 import { generateToken, generateRefreshToken } from "../utils/genrateToken.js";
-
-
 
 
 const RegisterUser = asyncHandler(async(req,res)=>{
     const {username , email , password } = req.body;
+
+    // console.log("register request",req);
 
     if(!email || !password || !username){
         throw new ApiError(400,"All fields are required");
@@ -26,13 +25,15 @@ const RegisterUser = asyncHandler(async(req,res)=>{
 const LoginUser = asyncHandler(async(req,res)=>{
     const { username , password } = req.body;
 
+    console.log(req);
+
     if(!username || !password){
         throw new ApiError(400,"username and password is required");
     }
 
     const response = await pool.query("SELECT * FROM users WHERE username = $1",[username]);
 
-    if(response.rows.length === 0){
+    if(response.rows[0].length === 0){
         throw new ApiError(404,"User not found");
     }
 
@@ -48,8 +49,8 @@ const LoginUser = asyncHandler(async(req,res)=>{
     const refreshToken = generateRefreshToken(user);
 
  await pool.query(
-    "UPDATE users SET refresh_token=$1 WHERE id=$2",
-    [refreshToken, user.user_id]
+    "UPDATE users SET refresh_token=$1 WHERE users_id=$2",
+    [refreshToken, user.users_id]
   );
 
   res.cookie("refreshToken", refreshToken, {
@@ -64,7 +65,7 @@ const LoginUser = asyncHandler(async(req,res)=>{
 
 const getallusers = asyncHandler(async(req,res)=>{
     
-    const results = await pool.query("SELECT * FROM users");
+    const results = await pool.query("SELECT * FROM USERS");
 
     res.status(200).json(new ApiResponse(200,"All users fetched successfully",results.rows));
     
